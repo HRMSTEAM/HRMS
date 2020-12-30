@@ -18,6 +18,9 @@
 <div class="container">
   <h3>Right Aligned Navbar</h3>
   <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
+  
+    <p>Makrand Changed</p>
+  
 </div>
 
 	<jsp:include page="WEB-INF/include/footer.jsp"></jsp:include>
