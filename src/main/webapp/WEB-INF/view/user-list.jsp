@@ -21,6 +21,7 @@
 				<th>Middle Name</th>
 				<th>Last Name</th>
 				<th>Action</th>
+				<th>Delete</th>
 			</tr>
 			</thead>
 			<tbody>
