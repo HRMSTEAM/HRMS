@@ -4,11 +4,7 @@
 <head>
   <title>Demo App Example</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  
-  
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
 </head>
 <body>
 	<jsp:include page="WEB-INF/include/header.jsp"></jsp:include>
@@ -18,12 +14,20 @@
 <div class="container">
   <h3>Right Aligned Navbar</h3>
   <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
-  
+
     <p>Makrand Changed</p>
     
     
         <p>Makrand Changed 2nd time</p>
     
+
+
+    <p>Makrand changed for 2 nd time</p>
+
+    <p>Makrand Changed</p>
+    
+	<h2>Hiiiiiiiiiii</h2>
+
   
 </div>
 
