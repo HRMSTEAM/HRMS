@@ -19,7 +19,11 @@
   <h3>Right Aligned Navbar</h3>
   <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
   
-    <p>Makrand changed for 2 nd time</p>
+    <p>Makrand Changed</p>
+    
+    
+        <p>Makrand Changed 2nd time</p>
+    
   
 </div>
 
