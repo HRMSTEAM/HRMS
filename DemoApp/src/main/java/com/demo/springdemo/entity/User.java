@@ -7,6 +7,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.springframework.context.annotation.Scope;
+
 @Entity
 @Table(name = "user")
 public class User {

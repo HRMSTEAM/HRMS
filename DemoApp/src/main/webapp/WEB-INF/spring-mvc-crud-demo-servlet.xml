@@ -13,6 +13,7 @@
 		http://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/tx 
 		http://www.springframework.org/schema/tx/spring-tx.xsd">
+		
 
 	<!-- Add support for component scanning -->
 	<context:component-scan base-package="com.demo.springdemo" />
@@ -28,11 +29,13 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
+	
+	
 	<!-- Step 1: Define Database DataSource / connection pool -->
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/hrms?useSSL=false&amp;serverTimezone=UTC" />
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/test?useSSL=false&amp;serverTimezone=UTC" />
         <property name="user" value="root" />
         <property name="password" value="root" /> 
 
@@ -55,8 +58,7 @@
 		   </props>
 		</property>
    </bean>	  
-
-    <!-- Step 3: Setup Hibernate transaction manager -->
+     <!-- Step 3: Setup Hibernate transaction manager -->
 	<bean id="myTransactionManager"
             class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>

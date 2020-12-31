@@ -16,13 +16,11 @@
    		<table class="table table-hover">
    			<thead>
 			<tr>
-			<th>Makarnd</th>
 				<th>User Id</th>
 				<th>First Name</th>
 				<th>Middle Name</th>
 				<th>Last Name</th>
 				<th>Action</th>
-				<th>Delete</th>
 			</tr>
 			</thead>
 			<tbody>
