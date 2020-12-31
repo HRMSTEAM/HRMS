@@ -71,7 +71,7 @@
 						id="pincode"  name="pincode"/>
  				</div>
  				<div class="col-sm-2">
-					<label>Pan No</label>
+					<label>Pan Number</label>
 				</div>
 				<div class="col-sm-2">
 					<form:input path="panno" class="form-control" type="text"
