@@ -7,8 +7,6 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import org.springframework.context.annotation.Scope;
-
 @Entity
 @Table(name = "user")
 public class User {
@@ -257,6 +255,17 @@ public class User {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+
+	@Override
+	public String toString() {
+		return "User [companyId=" + companyId + ", branchId=" + branchId + ", departmentId=" + departmentId
+				+ ", userId=" + userId + ", userCode=" + userCode + ", userName=" + userName + ", Password=" + Password
+				+ ", mobileNo=" + mobileNo + ", emailId=" + emailId + ", dateOfBirth=" + dateOfBirth + ", gender="
+				+ gender + ", userAddress=" + userAddress + ", userPincode=" + userPincode + ", createdBy=" + createdBy
+				+ ", createdDate=" + createdDate + ", deletedBy=" + deletedBy + ", deletedDate=" + deletedDate
+				+ ", status=" + status + "]";
 	}
 	
 	

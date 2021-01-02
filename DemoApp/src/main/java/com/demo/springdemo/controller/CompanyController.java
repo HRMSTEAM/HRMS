@@ -14,7 +14,7 @@ import com.demo.springdemo.service.CompanyService;
 @RequestMapping("/company")
 public class CompanyController {
 
-	@Autowired
+	/*@Autowired
 	private CompanyService companyService;
 
 	@GetMapping("/list")
@@ -29,6 +29,6 @@ public class CompanyController {
 		Company company = companyService.getCompany(companyId);
 		model.addAttribute("company", company);
 		return "sign-up-form";
-	}
+	}*/
 
 }
