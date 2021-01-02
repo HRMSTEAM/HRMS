@@ -10,31 +10,26 @@ import javax.validation.constraints.Size;
 import org.springframework.context.annotation.Scope;
 
 @Entity
-@Table(name = "company")
-public class Company {
+@Table(name = "branch")
+public class Department {
 
 	@Id
 	@Column(name = "company_id")
 	private String companyId;
+	
+	@Id
+	@Column(name = "branch_id")
+	private String branchId;
+	
+	@Id
+	@Column(name = "department_id")
+	private String departmentId;
 
- 	@Column(name = "company_name")
- 	private String companyName;
+ 	@Column(name = "department_name")
+ 	private String departmentName;
 
 	
-	@Column(name = "company_address")
-	private String companyAddress;
-
-	@Column(name = "company_city")
-	private String companyCity;
-
-	@Column(name = "company_state") 
-	private String companyState;
-
-	@Column(name = "country")
-	private String country;
 	
-	@Column(name = "gst_no")
-	private String gstNo;
 	
 	@Column(name = "created_by")
 	private String createdBy;
@@ -63,63 +58,33 @@ public class Company {
 	}
 
 
-	public String getCompanyName() {
-		return companyName;
+	public String getBranchId() {
+		return branchId;
 	}
 
 
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
+	public void setBranchId(String branchId) {
+		this.branchId = branchId;
 	}
 
 
-	public String getCompanyAddress() {
-		return companyAddress;
+	public String getDepartmentId() {
+		return departmentId;
 	}
 
 
-	public void setCompanyAddress(String companyAddress) {
-		this.companyAddress = companyAddress;
+	public void setDepartmentId(String departmentId) {
+		this.departmentId = departmentId;
 	}
 
 
-	public String getCompanyCity() {
-		return companyCity;
+	public String getDepartmentName() {
+		return departmentName;
 	}
 
 
-	public void setCompanyCity(String companyCity) {
-		this.companyCity = companyCity;
-	}
-
-
-	public String getCompanyState() {
-		return companyState;
-	}
-
-
-	public void setCompanyState(String companyState) {
-		this.companyState = companyState;
-	}
-
-
-	public String getCountry() {
-		return country;
-	}
-
-
-	public void setCountry(String country) {
-		this.country = country;
-	}
-
-
-	public String getGstNo() {
-		return gstNo;
-	}
-
-
-	public void setGstNo(String gstNo) {
-		this.gstNo = gstNo;
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
 	}
 
 
@@ -172,7 +137,8 @@ public class Company {
 		this.status = status;
 	}
 
+
 	
-	
+
 
 }

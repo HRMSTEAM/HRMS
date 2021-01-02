@@ -10,31 +10,33 @@ import javax.validation.constraints.Size;
 import org.springframework.context.annotation.Scope;
 
 @Entity
-@Table(name = "company")
-public class Company {
+@Table(name = "branch")
+public class Branch {
 
 	@Id
 	@Column(name = "company_id")
 	private String companyId;
+	
+	@Id
+	@Column(name = "branch_id")
+	private String branchId;
 
- 	@Column(name = "company_name")
- 	private String companyName;
+ 	@Column(name = "branch_name")
+ 	private String branchName;
 
 	
-	@Column(name = "company_address")
-	private String companyAddress;
+	@Column(name = "branch_address")
+	private String branchAddress;
 
-	@Column(name = "company_city")
-	private String companyCity;
+	@Column(name = "branch_city")
+	private String branchCity;
 
-	@Column(name = "company_state") 
-	private String companyState;
+	@Column(name = "branch_state") 
+	private String branchState;
 
-	@Column(name = "country")
-	private String country;
+	@Column(name = "branch_pincode") 
+	private String branchPincode;
 	
-	@Column(name = "gst_no")
-	private String gstNo;
 	
 	@Column(name = "created_by")
 	private String createdBy;
@@ -63,63 +65,63 @@ public class Company {
 	}
 
 
-	public String getCompanyName() {
-		return companyName;
+	public String getBranchId() {
+		return branchId;
 	}
 
 
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
+	public void setBranchId(String branchId) {
+		this.branchId = branchId;
 	}
 
 
-	public String getCompanyAddress() {
-		return companyAddress;
+	public String getBranchName() {
+		return branchName;
 	}
 
 
-	public void setCompanyAddress(String companyAddress) {
-		this.companyAddress = companyAddress;
+	public void setBranchName(String branchName) {
+		this.branchName = branchName;
 	}
 
 
-	public String getCompanyCity() {
-		return companyCity;
+	public String getBranchAddress() {
+		return branchAddress;
 	}
 
 
-	public void setCompanyCity(String companyCity) {
-		this.companyCity = companyCity;
+	public void setBranchAddress(String branchAddress) {
+		this.branchAddress = branchAddress;
 	}
 
 
-	public String getCompanyState() {
-		return companyState;
+	public String getBranchCity() {
+		return branchCity;
 	}
 
 
-	public void setCompanyState(String companyState) {
-		this.companyState = companyState;
+	public void setBranchCity(String branchCity) {
+		this.branchCity = branchCity;
 	}
 
 
-	public String getCountry() {
-		return country;
+	public String getBranchState() {
+		return branchState;
 	}
 
 
-	public void setCountry(String country) {
-		this.country = country;
+	public void setBranchState(String branchState) {
+		this.branchState = branchState;
 	}
 
 
-	public String getGstNo() {
-		return gstNo;
+	public String getBranchPincode() {
+		return branchPincode;
 	}
 
 
-	public void setGstNo(String gstNo) {
-		this.gstNo = gstNo;
+	public void setBranchPincode(String branchPincode) {
+		this.branchPincode = branchPincode;
 	}
 
 
@@ -172,7 +174,6 @@ public class Company {
 		this.status = status;
 	}
 
-	
-	
+
 
 }

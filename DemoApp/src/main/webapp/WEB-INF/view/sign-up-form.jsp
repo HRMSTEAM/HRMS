@@ -31,14 +31,14 @@
 					<label>Password (*)</label>
 				</div>
 				<div class="col-sm-3">
-					<form:input path="Password" class="form-control" type="password"
+					<form:input path="userPassword" class="form-control" type="password"
 						id="password" />
 					<img
 						src="${pageContext.request.contextPath}/resources/images/eye.png"
 						height="15" onmouseover="mouseoverPass();"
 						onmouseout="mouseoutPass();" />
 				</div>
-				<form:errors path="Password" cssClass="error" />
+				<form:errors path="userPassword" cssClass="error" />
 
 			</div>
 			<div class="row">
@@ -46,31 +46,13 @@
 					<label>First Name (*)</label>
 				</div>
 				<div class="col-sm-3">
-					<form:input path="firstName" class="form-control" />
+					<form:input path="userName" class="form-control" />
 				</div>
-				<form:errors path="firstName" cssClass="error" />
+				<form:errors path="userName" cssClass="error" />
 
 			</div>
-			<div class="row">
-				<div class="col-sm-3">
-					<label>Middle Name (*)</label>
-				</div>
-				<div class="col-sm-3">
-					<form:input path="middleName" class="form-control" />
-				</div>
-				<form:errors path="middleName" cssClass="error" />
-
-			</div>
-			<div class="row">
-				<div class="col-sm-3">
-					<label>Last Name (*)</label>
-				</div>
-				<div class="col-sm-3">
-					<form:input path="lastName" class="form-control" />
-
-				</div>
-				<form:errors path="lastName" cssClass="error" />
-			</div>
+			
+			
 			<div class="row">
 				<div class="col-sm-3">
 					<label>Gender</label>
