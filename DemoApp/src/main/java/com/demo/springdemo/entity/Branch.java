@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Scope;
 @Table(name = "branch")
 public class Branch {
 
-	@Id
+	//@Id
 	@Column(name = "company_id")
 	private String companyId;
 	

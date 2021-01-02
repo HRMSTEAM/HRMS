@@ -32,18 +32,18 @@
 				</div>
 				<div class="col-sm-3">
 					<form:input path="userPassword" class="form-control" type="password"
-						id="password" />
+						id="userPassword" />
 					<img
 						src="${pageContext.request.contextPath}/resources/images/eye.png"
 						height="15" onmouseover="mouseoverPass();"
 						onmouseout="mouseoutPass();" />
 				</div>
 				<form:errors path="userPassword" cssClass="error" />
-
 			</div>
+			
 			<div class="row">
 				<div class="col-sm-3">
-					<label>First Name (*)</label>
+					<label>User Name (*)</label>
 				</div>
 				<div class="col-sm-3">
 					<form:input path="userName" class="form-control" />
@@ -51,7 +51,66 @@
 				<form:errors path="userName" cssClass="error" />
 
 			</div>
-			
+			<div class="row">
+				<div class="col-sm-3">
+					<label>User Name (*)</label>
+				</div>
+				<div class="col-sm-3">
+					<form:input path="userName" class="form-control" />
+				</div>
+				<form:errors path="userName" cssClass="error" />
+
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<label>Email Id</label>
+				</div>
+				<div class="col-sm-3">
+					<form:input path="emailId" class="form-control" />
+				</div>
+				<form:errors path="emailId" cssClass="error" />
+
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<label>Mobile No</label>
+				</div>
+				<div class="col-sm-3">
+					<form:input path="mobileNo" class="form-control" />
+				</div>
+				<form:errors path="mobileNo" cssClass="error" />
+
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<label>Date Of Birth</label>
+				</div>
+				<div class="col-sm-3">
+					<form:input path="dateOfBirth" class="form-control" />
+				</div>
+				<form:errors path="dateOfBirth" cssClass="error" />
+
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<label>Address</label>
+				</div>
+				<div class="col-sm-3">
+					<form:input path="userAddress" class="form-control" />
+				</div>
+				<form:errors path="userAddress" cssClass="error" />
+
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<label>Pin Code</label>
+				</div>
+				<div class="col-sm-3">
+					<form:input path="userPincode" class="form-control" />
+				</div>
+				<form:errors path="userPincode" cssClass="error" />
+
+			</div>
 			
 			<div class="row">
 				<div class="col-sm-3">

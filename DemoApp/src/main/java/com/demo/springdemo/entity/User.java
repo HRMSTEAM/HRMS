@@ -11,15 +11,15 @@ import javax.validation.constraints.Size;
 @Table(name = "user")
 public class User {
 
-	@Id
+	//@Id
 	@Column(name = "company_id")
 	private String companyId;
 	
-	@Id
+	//@Id
 	@Column(name = "branch_id")
 	private String branchId;
 	
-	@Id
+	//@Id
 	@Column(name = "department_id")
 	private String departmentId;
 	
@@ -40,7 +40,7 @@ public class User {
 	@NotNull(message = "is required")
 	@Size(min = 8, message = "minimum 8 charaters and alphabets required")
 	@Column(name = "user_password")
-	private String Password;
+	private String userPassword;
 
 	@Column(name="mobile_no")
 	private String mobileNo;
@@ -138,13 +138,14 @@ public class User {
 	}
 
 
-	public String getPassword() {
-		return Password;
+
+	public String getUserPassword() {
+		return userPassword;
 	}
 
 
-	public void setPassword(String password) {
-		Password = password;
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
 	}
 
 
@@ -257,16 +258,6 @@ public class User {
 		this.status = status;
 	}
 
-
-	@Override
-	public String toString() {
-		return "User [companyId=" + companyId + ", branchId=" + branchId + ", departmentId=" + departmentId
-				+ ", userId=" + userId + ", userCode=" + userCode + ", userName=" + userName + ", Password=" + Password
-				+ ", mobileNo=" + mobileNo + ", emailId=" + emailId + ", dateOfBirth=" + dateOfBirth + ", gender="
-				+ gender + ", userAddress=" + userAddress + ", userPincode=" + userPincode + ", createdBy=" + createdBy
-				+ ", createdDate=" + createdDate + ", deletedBy=" + deletedBy + ", deletedDate=" + deletedDate
-				+ ", status=" + status + "]";
-	}
 	
 	
 
