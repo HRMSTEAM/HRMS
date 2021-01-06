@@ -13,22 +13,12 @@ import org.springframework.context.annotation.Scope;
 @Table(name = "branch")
 public class Department {
 
-	//@Id
-	@Column(name = "company_id")
-	private String companyId;
-	
-	//@Id
-	@Column(name = "branch_id")
-	private String branchId;
-	
 	@Id
 	@Column(name = "department_id")
-	private String departmentId;
+	private String departmentId="D00001";
 
  	@Column(name = "department_name")
- 	private String departmentName;
-
-	
+ 	private String departmentName;	
 	
 	
 	@Column(name = "created_by")
@@ -46,27 +36,6 @@ public class Department {
 
 	@Column(name = "status")
 	private String status;
-
-
-	public String getCompanyId() {
-		return companyId;
-	}
-
-
-	public void setCompanyId(String companyId) {
-		this.companyId = companyId;
-	}
-
-
-	public String getBranchId() {
-		return branchId;
-	}
-
-
-	public void setBranchId(String branchId) {
-		this.branchId = branchId;
-	}
-
 
 	public String getDepartmentId() {
 		return departmentId;
@@ -135,6 +104,14 @@ public class Department {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Department [departmentId=" + departmentId + ", departmentName=" + departmentName + ", createdBy="
+				+ createdBy + ", createdDate=" + createdDate + ", deletedBy=" + deletedBy + ", deletedDate="
+				+ deletedDate + ", status=" + status + "]";
 	}
 
 

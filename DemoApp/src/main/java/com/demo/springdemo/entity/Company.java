@@ -4,10 +4,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
-import org.springframework.context.annotation.Scope;
 
 @Entity
 @Table(name = "company")
@@ -15,11 +11,10 @@ public class Company {
 
 	@Id
 	@Column(name = "company_id")
-	private String companyId;
+	private String companyId="C00001";
 
  	@Column(name = "company_name")
  	private String companyName;
-
 	
 	@Column(name = "company_address")
 	private String companyAddress;
@@ -57,122 +52,105 @@ public class Company {
 		return companyId;
 	}
 
-
 	public void setCompanyId(String companyId) {
 		this.companyId = companyId;
 	}
-
 
 	public String getCompanyName() {
 		return companyName;
 	}
 
-
 	public void setCompanyName(String companyName) {
 		this.companyName = companyName;
 	}
-
 
 	public String getCompanyAddress() {
 		return companyAddress;
 	}
 
-
 	public void setCompanyAddress(String companyAddress) {
 		this.companyAddress = companyAddress;
 	}
-
 
 	public String getCompanyCity() {
 		return companyCity;
 	}
 
-
 	public void setCompanyCity(String companyCity) {
 		this.companyCity = companyCity;
 	}
-
 
 	public String getCompanyState() {
 		return companyState;
 	}
 
-
 	public void setCompanyState(String companyState) {
 		this.companyState = companyState;
 	}
-
 
 	public String getCountry() {
 		return country;
 	}
 
-
 	public void setCountry(String country) {
 		this.country = country;
 	}
-
 
 	public String getGstNo() {
 		return gstNo;
 	}
 
-
 	public void setGstNo(String gstNo) {
 		this.gstNo = gstNo;
 	}
-
 
 	public String getCreatedBy() {
 		return createdBy;
 	}
 
-
 	public void setCreatedBy(String createdBy) {
 		this.createdBy = createdBy;
 	}
-
 
 	public String getCreatedDate() {
 		return createdDate;
 	}
 
-
 	public void setCreatedDate(String createdDate) {
 		this.createdDate = createdDate;
 	}
-
 
 	public String getDeletedBy() {
 		return deletedBy;
 	}
 
-
 	public void setDeletedBy(String deletedBy) {
 		this.deletedBy = deletedBy;
 	}
-
 
 	public String getDeletedDate() {
 		return deletedDate;
 	}
 
-
 	public void setDeletedDate(String deletedDate) {
 		this.deletedDate = deletedDate;
 	}
-
 
 	public String getStatus() {
 		return status;
 	}
 
-
 	public void setStatus(String status) {
 		this.status = status;
 	}
 
+	@Override
+	public String toString() {
+		return "Company [companyId=" + companyId + ", companyName=" + companyName + ", companyAddress=" + companyAddress
+				+ ", companyCity=" + companyCity + ", companyState=" + companyState + ", country=" + country
+				+ ", gstNo=" + gstNo + ", createdBy=" + createdBy + ", createdDate=" + createdDate + ", deletedBy="
+				+ deletedBy + ", deletedDate=" + deletedDate + ", status=" + status + "]";
+	}
 	
 	
-
 }

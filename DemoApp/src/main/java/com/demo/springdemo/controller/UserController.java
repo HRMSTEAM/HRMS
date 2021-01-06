@@ -32,7 +32,7 @@ public class UserController {
 		if (bindingResult.hasErrors()) {
 
 			return "sign-up-form";
-		} else {
+		}/* else {
 			List<User> userList = userService.getUsers();
 			boolean m = false;
 			for (int i = 0; i < userList.size(); i++) {
@@ -45,16 +45,17 @@ public class UserController {
 
 			if (m) {
 				return "sign-up-form";
-			}
+			}*/
 
 			else {
+				System.out.println("user: "+user);
 				userService.saveUser(user);
 
 				model.addAttribute("user", new User());
 
 				return "login-form";
 			}
-		}
+		//}
 	}
 
 	@GetMapping("/list")

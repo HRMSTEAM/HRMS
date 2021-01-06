@@ -1,8 +1,11 @@
 package com.demo.springdemo.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -11,23 +14,11 @@ import javax.validation.constraints.Size;
 @Table(name = "user")
 public class User {
 
-	//@Id
-	@Column(name = "company_id")
-	private String companyId;
-	
-	//@Id
-	@Column(name = "branch_id")
-	private String branchId;
-	
-	//@Id
-	@Column(name = "department_id")
-	private String departmentId;
-	
 	@Id
 	@Column(name = "user_id")
 	@NotNull(message = "is required")
 	@Size(min = 5, message = "User Id size must be greatr than 5")
-	private String userId;
+	private String userId="U00001";
 	
 	@Column(name="user_code")
 	private String userCode;
@@ -71,128 +62,90 @@ public class User {
 	private String deletedBy;
 	
 	@Column(name = "deleted_date")
-	private String deletedDate;
-	
+	private String deletedDate;	
 
 	@Column(name = "status")
 	private String status;
 
+	@ManyToOne(cascade= {CascadeType.ALL})
+	@JoinColumn(name="company_id")
+	private Company company;
+	
+	@ManyToOne(cascade= {CascadeType.ALL})
+	@JoinColumn(name="branch_id")
+	private Branch branch;
 
-	public String getCompanyId() {
-		return companyId;
-	}
-
-
-	public void setCompanyId(String companyId) {
-		this.companyId = companyId;
-	}
-
-
-	public String getBranchId() {
-		return branchId;
-	}
-
-
-	public void setBranchId(String branchId) {
-		this.branchId = branchId;
-	}
-
-
-	public String getDepartmentId() {
-		return departmentId;
-	}
-
-
-	public void setDepartmentId(String departmentId) {
-		this.departmentId = departmentId;
-	}
-
+	@ManyToOne(cascade= {CascadeType.ALL})
+	@JoinColumn(name="department_id")
+	private Department department;	
 
 	public String getUserId() {
 		return userId;
 	}
 
-
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-
 
 	public String getUserCode() {
 		return userCode;
 	}
 
-
 	public void setUserCode(String userCode) {
 		this.userCode = userCode;
 	}
-
 
 	public String getUserName() {
 		return userName;
 	}
 
-
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-
-
 
 	public String getUserPassword() {
 		return userPassword;
 	}
 
-
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
 	}
-
 
 	public String getMobileNo() {
 		return mobileNo;
 	}
 
-
 	public void setMobileNo(String mobileNo) {
 		this.mobileNo = mobileNo;
 	}
-
 
 	public String getEmailId() {
 		return emailId;
 	}
 
-
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
-
 
 	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-
 
 	public String getGender() {
 		return gender;
 	}
 
-
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
 
-
 	public String getUserAddress() {
 		return userAddress;
 	}
-
 
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
@@ -258,13 +211,39 @@ public class User {
 		this.status = status;
 	}
 
+	public Company getCompany() {
+		return company;
+	}
+
+	public void setCompany(Company company) {
+		this.company = company;
+	}
+
+	public Branch getBranch() {
+		return branch;
+	}
+
+	public void setBranch(Branch branch) {
+		this.branch = branch;
+	}
+
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", userCode=" + userCode + ", userName=" + userName + ", userPassword="
+				+ userPassword + ", mobileNo=" + mobileNo + ", emailId=" + emailId + ", dateOfBirth=" + dateOfBirth
+				+ ", gender=" + gender + ", userAddress=" + userAddress + ", userPincode=" + userPincode
+				+ ", createdBy=" + createdBy + ", createdDate=" + createdDate + ", deletedBy=" + deletedBy
+				+ ", deletedDate=" + deletedDate + ", status=" + status + ", company=" + company + ", branch=" + branch
+				+ ", department=" + department + "]";
+	}
 	
 	
-
-	
-
-
-
-	
-
 }

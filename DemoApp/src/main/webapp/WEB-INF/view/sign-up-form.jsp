@@ -21,6 +21,10 @@
 					<label>User Id (*)</label>
 				</div>
 				<div class="col-sm-3">
+					<%-- <form:input path="companyId" class="form-control" />
+					<form:input path="branchId" class="form-control" />
+					<form:input path="departmentId" class="form-control" /> --%>
+				
 					<form:input path="userId" class="form-control" />
 				</div>
 				<form:errors path="userId" cssClass="error" />
@@ -49,18 +53,19 @@
 					<form:input path="userName" class="form-control" />
 				</div>
 				<form:errors path="userName" cssClass="error" />
-
 			</div>
-			<div class="row">
+			<%-- <div class="row">
 				<div class="col-sm-3">
-					<label>User Name (*)</label>
+					<label>Department</label>
 				</div>
 				<div class="col-sm-3">
-					<form:input path="userName" class="form-control" />
+					<form:select path="department">
+						<form:options items="${availableDepartments}" />
+					</form:select>
 				</div>
-				<form:errors path="userName" cssClass="error" />
-
-			</div>
+				<form:errors path="department" cssClass="error" />
+			</div> --%>
+				
 			<div class="row">
 				<div class="col-sm-3">
 					<label>Email Id</label>
@@ -69,7 +74,6 @@
 					<form:input path="emailId" class="form-control" />
 				</div>
 				<form:errors path="emailId" cssClass="error" />
-
 			</div>
 			<div class="row">
 				<div class="col-sm-3">
@@ -79,7 +83,6 @@
 					<form:input path="mobileNo" class="form-control" />
 				</div>
 				<form:errors path="mobileNo" cssClass="error" />
-
 			</div>
 			<div class="row">
 				<div class="col-sm-3">
@@ -89,7 +92,6 @@
 					<form:input path="dateOfBirth" class="form-control" />
 				</div>
 				<form:errors path="dateOfBirth" cssClass="error" />
-
 			</div>
 			<div class="row">
 				<div class="col-sm-3">

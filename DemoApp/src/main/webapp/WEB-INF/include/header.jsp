@@ -25,6 +25,7 @@
 	      <li><a href="${pageContext.request.contextPath}/user/list">User List</a></li>
 	    </ul>
 	    <ul class="nav navbar-nav navbar-right">
+	      <li><a href="${pageContext.request.contextPath}/branch/ShowBranchMasterForm"><span class="glyphicon glyphicon-branch"></span> Branch Master</a></li>
 	      <li><a href="${pageContext.request.contextPath}/user/ShowSignUpForm"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 	      <li><a href="${pageContext.request.contextPath}/user/ShowLoginForm"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 	    </ul>

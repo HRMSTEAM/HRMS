@@ -1,25 +1,20 @@
 package com.demo.springdemo.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
-import org.springframework.context.annotation.Scope;
 
 @Entity
 @Table(name = "branch")
 public class Branch {
 
-	//@Id
-	@Column(name = "company_id")
-	private String companyId;
-	
 	@Id
 	@Column(name = "branch_id")
-	private String branchId;
+	private String branchId="B00001";
 
  	@Column(name = "branch_name")
  	private String branchName;
@@ -48,22 +43,14 @@ public class Branch {
 	private String deletedBy;
 	
 	@Column(name = "deleted_date")
-	private String deletedDate;
-	
+	private String deletedDate;	
 
 	@Column(name = "status")
 	private String status;
-
-
-	public String getCompanyId() {
-		return companyId;
-	}
-
-
-	public void setCompanyId(String companyId) {
-		this.companyId = companyId;
-	}
-
+	
+	@ManyToOne(cascade= {CascadeType.ALL})
+	@JoinColumn(name="company_id")
+	private Company company;
 
 	public String getBranchId() {
 		return branchId;
@@ -159,11 +146,9 @@ public class Branch {
 		return deletedDate;
 	}
 
-
 	public void setDeletedDate(String deletedDate) {
 		this.deletedDate = deletedDate;
 	}
-
 
 	public String getStatus() {
 		return status;
@@ -175,5 +160,23 @@ public class Branch {
 	}
 
 
+	public Company getCompany() {
+		return company;
+	}
+
+	public void setCompany(Company company) {
+		this.company = company;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Branch [branchId=" + branchId + ", branchName=" + branchName + ", branchAddress=" + branchAddress
+				+ ", branchCity=" + branchCity + ", branchState=" + branchState + ", branchPincode=" + branchPincode
+				+ ", createdBy=" + createdBy + ", createdDate=" + createdDate + ", deletedBy=" + deletedBy
+				+ ", deletedDate=" + deletedDate + ", status=" + status + ", company=" + company + "]";
+	}
+
+	
 
 }
