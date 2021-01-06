@@ -34,7 +34,7 @@ public class BranchController {
 
 		return "branch-master";
 	}
-	@ModelAttribute("availableCompany")
+	/*@ModelAttribute("availableCompany")
 	   public List<String> getNumbersList() {
 	      List<String> numbersList = new ArrayList<String>();
 	      numbersList.add("Infosys123");
@@ -42,7 +42,10 @@ public class BranchController {
 	      numbersList.add("SS");
 	      numbersList.add("C00001");
 	      return numbersList;
-	   }
+	      
+	      
+
+	   }*/
 
 	/*@GetMapping("/list")
 	public String listBranch(Model model) {

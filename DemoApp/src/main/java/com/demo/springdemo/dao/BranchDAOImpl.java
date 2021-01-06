@@ -21,7 +21,7 @@ public class BranchDAOImpl implements BranchDAO {
 		
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		Company company = currentSession.get(Company.class, branch.getCompany().getCompanyId());
+		Company company = currentSession.get(Company.class, "C00001"/*branch.getCompany().getCompanyId()*/);
 		
 		branch.setCompany(company);
 		

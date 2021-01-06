@@ -40,9 +40,16 @@
 					<label>Company</label>
 				</div>
 				<div class="col-sm-3">
-					<form:select path="company.companyId">
+					<%-- <form:select path="company.companyId">
 						<form:options items="${availableCompany}" />
-					</form:select>
+					</form:select> --%>
+					
+					<select name="company" class="form-control">
+						<option value="-1">--Select Company--</option>
+					    <c:forEach items="${availableCompany}" var="company">
+					        <option value="${company.companyId}">${company.companyName}</option>
+					    </c:forEach>
+					</select>
 				</div>
 				<form:errors path="branchName" cssClass="error" />
 			</div>
