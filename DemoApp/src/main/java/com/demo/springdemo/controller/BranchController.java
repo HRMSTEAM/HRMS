@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.demo.springdemo.entity.Branch;
+import com.demo.springdemo.entity.Company;
 import com.demo.springdemo.service.BranchService;
+import com.demo.springdemo.service.CompanyService;
 
 @Controller
 @RequestMapping("/branch")
@@ -20,6 +22,9 @@ public class BranchController {
 
 	@Autowired
 	private BranchService branchService;
+	
+	@Autowired
+	private CompanyService companyService;
 
 	@PostMapping("/saveBranch")
 	public String saveBranch(@ModelAttribute("branch") Branch branch, Model model) {
@@ -28,7 +33,10 @@ public class BranchController {
 				
 		branchService.saveBranch(branch);
 
-		model.addAttribute("branch", branch);		
+		model.addAttribute("branch", branch);	
+		
+		List<Company> theCompany = companyService.getCompany();
+		model.addAttribute("availableCompany",theCompany);
 		
 		System.out.println("sssssss: "+new Branch());
 
