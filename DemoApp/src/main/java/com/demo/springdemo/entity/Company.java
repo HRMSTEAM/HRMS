@@ -18,6 +18,9 @@ public class Company {
 	
 	@Column(name = "company_address")
 	private String companyAddress;
+	
+	@Column(name = "company_pincode")
+	private String companyPinCode;
 
 	@Column(name = "company_city")
 	private String companyCity;
@@ -41,15 +44,17 @@ public class Company {
 	private String deletedBy;
 	
 	@Column(name = "deleted_date")
-	private String deletedDate;
-	
+	private String deletedDate;	
 
 	@Column(name = "status")
 	private String status;
 
-
 	public String getCompanyId() {
 		return companyId;
+	}
+	
+	public Company() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public void setCompanyId(String companyId) {
@@ -70,6 +75,14 @@ public class Company {
 
 	public void setCompanyAddress(String companyAddress) {
 		this.companyAddress = companyAddress;
+	}
+
+	public String getCompanyPinCode() {
+		return companyPinCode;
+	}
+
+	public void setCompanyPinCode(String companyPinCode) {
+		this.companyPinCode = companyPinCode;
 	}
 
 	public String getCompanyCity() {
@@ -147,10 +160,14 @@ public class Company {
 	@Override
 	public String toString() {
 		return "Company [companyId=" + companyId + ", companyName=" + companyName + ", companyAddress=" + companyAddress
-				+ ", companyCity=" + companyCity + ", companyState=" + companyState + ", country=" + country
-				+ ", gstNo=" + gstNo + ", createdBy=" + createdBy + ", createdDate=" + createdDate + ", deletedBy="
-				+ deletedBy + ", deletedDate=" + deletedDate + ", status=" + status + "]";
+				+ ", companyPinCode=" + companyPinCode + ", companyCity=" + companyCity + ", companyState="
+				+ companyState + ", country=" + country + ", gstNo=" + gstNo + ", createdBy=" + createdBy
+				+ ", createdDate=" + createdDate + ", deletedBy=" + deletedBy + ", deletedDate=" + deletedDate
+				+ ", status=" + status + "]";
 	}
+
+
+	
 	
 	
 }

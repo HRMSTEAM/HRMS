@@ -22,10 +22,17 @@
 	          <li><a href="#">Page 1-3</a></li>
 	        </ul>
 	      </li>
+	      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Masters<span class="caret"></span></a>
+	        <ul class="dropdown-menu">
+	          <li><a href="${pageContext.request.contextPath}/company/ShowCompanyMasterForm"><span class="glyphicon glyphicon-branch"></span> Company Master</a></li>
+	          <li><a href="${pageContext.request.contextPath}/branch/ShowBranchMasterForm"><span class="glyphicon glyphicon-branch"></span> Branch Master</a></li>
+	          <li><a href="${pageContext.request.contextPath}/department/ShowDepartmentMasterForm"><span class="glyphicon glyphicon-branch"></span> Department Master</a></li>
+	        </ul>
+	      </li>
 	      <li><a href="${pageContext.request.contextPath}/user/list">User List</a></li>
 	    </ul>
 	    <ul class="nav navbar-nav navbar-right">
-	      <li><a href="${pageContext.request.contextPath}/branch/ShowBranchMasterForm"><span class="glyphicon glyphicon-branch"></span> Branch Master</a></li>
+	      
 	      <li><a href="${pageContext.request.contextPath}/user/ShowSignUpForm"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 	      <li><a href="${pageContext.request.contextPath}/user/ShowLoginForm"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 	    </ul>

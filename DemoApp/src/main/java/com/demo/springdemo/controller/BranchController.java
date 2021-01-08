@@ -29,8 +29,6 @@ public class BranchController {
 	@PostMapping("/saveBranch")
 	public String saveBranch(@ModelAttribute("branch") Branch branch, Model model) {
 	
-		System.out.println("branch: "+branch);
-				
 		branchService.saveBranch(branch);
 
 		model.addAttribute("branch", branch);	
@@ -38,8 +36,6 @@ public class BranchController {
 		List<Company> theCompany = companyService.getCompany();
 		model.addAttribute("availableCompany",theCompany);
 		
-		System.out.println("sssssss: "+new Branch());
-
 		return "branch-master";
 	}
 	/*@ModelAttribute("availableCompany")

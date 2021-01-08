@@ -1,12 +1,10 @@
 package com.demo.springdemo.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.demo.springdemo.entity.Branch;
@@ -38,16 +36,13 @@ public class DemoController {
 		return "branch-master";
 	}
 	
-	/*@ModelAttribute("availableCompany")
-	   public List<String> getNumbersList() {
-	      
-		List<String> numbersList = new ArrayList<String>();
-	      numbersList.add("Infosys123");
-	      numbersList.add("Capgemini");
-	      numbersList.add("SS");
-	      numbersList.add("C00001");
-	      return numbersList;
-	   }*/
+	@RequestMapping("company/ShowCompanyMasterForm")
+	public String showCompanyMasterForm(Model model, Company company) {
+		
+		model.addAttribute("company", company);
+				
+		return "company-master";
+	}
 	
 	@RequestMapping("user/ShowSignUpForm")
 	public String showSignUpForm(Model model, User user) {

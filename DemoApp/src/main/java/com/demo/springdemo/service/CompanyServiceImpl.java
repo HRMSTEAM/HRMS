@@ -8,28 +8,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.demo.springdemo.dao.CompanyDAO;
-import com.demo.springdemo.dao.UserDAO;
 import com.demo.springdemo.entity.Company;
-import com.demo.springdemo.entity.User;
 
 @Service
 public class CompanyServiceImpl implements CompanyService {
 	
 	@Autowired
-	CompanyDAO CompanyDAO;
+	CompanyDAO companyDAO;
 
-	 
+	@Transactional
+	public void saveCompany(Company company) {
+		companyDAO.saveCompany(company);		
+	}
 
 	@Transactional
 	public List<Company> getCompany() {
-		return CompanyDAO.getCompany();
+		return companyDAO.getCompany();
 	}
 
 	@Transactional
 	public Company getCompany(String companyId) {
-		return CompanyDAO.getCompany(companyId);
+		return companyDAO.getCompany(companyId);
 	}
-
-	 
+	
+	@Transactional
+	public void deleteCompany(String companyId) {
+		companyDAO.deleteCompany(companyId);		
+	}	 
 
 }
