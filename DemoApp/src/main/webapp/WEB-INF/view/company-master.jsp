@@ -21,14 +21,12 @@
 					<label>Company Id</label>
 				</div>
 				<div class="col-sm-3">
-					<form:input path="companyId" class="form-control" />
+					<form:input path="companyId" class="form-control" readonly="true"/>
 				</div>
 				<form:errors path="companyId" cssClass="error" />
-			</div>			
-			
-			<div class="row">
+				
 				<div class="col-sm-3">
-					<label>Branch Name</label>
+					<label>Company Name</label>
 				</div>
 				<div class="col-sm-3">
 					<form:input path="companyName" class="form-control" />
@@ -43,8 +41,7 @@
 					<form:input path="companyAddress" class="form-control" />
 				</div>
 				<form:errors path="companyAddress" cssClass="error" />
-			</div>
-			<div class="row">
+				
 				<div class="col-sm-3">
 					<label>Pin Code</label>
 				</div>
@@ -52,8 +49,10 @@
 					<form:input path="companyPinCode" class="form-control" />
 				</div>
 				<form:errors path="companyPinCode" cssClass="error" />
+				
 			</div>
-			<div class="row">
+			<div class="row">	
+				
 				<div class="col-sm-3">
 					<label>City</label>
 				</div>
@@ -61,8 +60,7 @@
 					<form:input path="companyCity" class="form-control" />
 				</div>
 				<form:errors path="companyCity" cssClass="error" />
-			</div>
-			<div class="row">
+			
 				<div class="col-sm-3">
 					<label>State</label>
 				</div>
@@ -79,8 +77,7 @@
 					<form:input path="country" class="form-control" />
 				</div>
 				<form:errors path="country" cssClass="error" />
-			</div>
-			<div class="row">
+		
 				<div class="col-sm-3">
 					<label>GST No</label>
 				</div>
@@ -89,30 +86,12 @@
 				</div>
 				<form:errors path="gstNo" cssClass="error" />
 			</div>
-			
-			<div class="row">
-				<div class="col-sm-3">
-					<label>Created By</label>
-				</div>
-				<div class="col-sm-3">
-					<form:input path="createdBy" class="form-control" />
-				</div>
-				<form:errors path="createdBy" cssClass="error" />
-			</div>
-			<div class="row">
-				<div class="col-sm-3">
-					<label>Status</label>
-				</div>
-				<div class="col-sm-3">
-					<form:input path="status" class="form-control" />
-				</div>
-				<form:errors path="status" cssClass="error" />
-			</div>
+			<br><br>
 			<div class="row">
 				<div class="col-sm-3">
 					<label></label>
 				</div>
-				<div class="col-sm-3">
+				<div class="col-sm-6">
 					<input type="submit" value="Save" class="btn btn-block">
 				</div>
 			</div>

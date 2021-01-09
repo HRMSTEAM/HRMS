@@ -24,7 +24,7 @@ public class CompanyController {
 	public String saveBranch(@ModelAttribute("company") Company company, Model model) {
 	
 		companyService.saveCompany(company);
-		model.addAttribute("company", company);			
+		model.addAttribute("company", company);
 		return "company-master";
 	}
 

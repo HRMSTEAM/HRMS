@@ -21,12 +21,10 @@
 					<label>Branch Id</label>
 				</div>
 				<div class="col-sm-3">
-					<form:input path="branchId" class="form-control" />
+					<form:input path="branchId" class="form-control" readonly="true"/>
 				</div>
 				<form:errors path="branchId" cssClass="error" />
-			</div>			
 			
-			<div class="row">
 				<div class="col-sm-3">
 					<label>Branch Name</label>
 				</div>
@@ -45,8 +43,7 @@
 					</form:select>					
 				</div>
 				<form:errors path="branchName" cssClass="error" />
-			</div>
-			<div class="row">
+			
 				<div class="col-sm-3">
 					<label>Address</label>
 				</div>
@@ -63,8 +60,7 @@
 					<form:input path="branchCity" class="form-control" />
 				</div>
 				<form:errors path="branchCity" cssClass="error" />
-			</div>
-			<div class="row">
+			
 				<div class="col-sm-3">
 					<label>State</label>
 				</div>
@@ -82,29 +78,12 @@
 				</div>
 				<form:errors path="branchPincode" cssClass="error" />
 			</div>
-			<div class="row">
-				<div class="col-sm-3">
-					<label>Created By</label>
-				</div>
-				<div class="col-sm-3">
-					<form:input path="createdBy" class="form-control" />
-				</div>
-				<form:errors path="createdBy" cssClass="error" />
-			</div>
-			<div class="row">
-				<div class="col-sm-3">
-					<label>Status</label>
-				</div>
-				<div class="col-sm-3">
-					<form:input path="status" class="form-control" />
-				</div>
-				<form:errors path="status" cssClass="error" />
-			</div>
+			<br>
 			<div class="row">
 				<div class="col-sm-3">
 					<label></label>
 				</div>
-				<div class="col-sm-3">
+				<div class="col-sm-6">
 					<input type="submit" value="Save" class="btn btn-block">
 				</div>
 			</div>

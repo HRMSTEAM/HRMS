@@ -12,6 +12,8 @@ public interface BranchDAO {
 	
 	public Branch getBranch(String branchId);
 	
-	public void deleteBranch(String branchId);	
+	public void deleteBranch(String branchId);
+	
+	public String getMaxId();
 	
 }

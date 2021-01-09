@@ -2,14 +2,19 @@ package com.demo.springdemo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.GeneratorType;
 
 @Entity
 @Table(name = "company")
 public class Company {
 
 	@Id
+	//@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "company_id")
 	private String companyId;
 

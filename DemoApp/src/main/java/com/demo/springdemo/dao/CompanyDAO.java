@@ -12,6 +12,8 @@ public interface CompanyDAO {
  	
  	public Company getCompany(String companyId);
 	
-	public void deleteCompany(String companyId);	
+	public void deleteCompany(String companyId);
+	
+	public String getMaxId();
  	
 }

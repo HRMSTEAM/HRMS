@@ -14,7 +14,7 @@ public class Branch {
 
 	@Id
 	@Column(name = "branch_id")
-	private String branchId="B00001";
+	private String branchId;
 
  	@Column(name = "branch_name")
  	private String branchName;
@@ -56,7 +56,10 @@ public class Branch {
 		return branchId;
 	}
 
-
+	public Branch() {
+		// TODO Auto-generated constructor stub
+	}
+		
 	public void setBranchId(String branchId) {
 		this.branchId = branchId;
 	}
