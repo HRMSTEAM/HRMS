@@ -15,11 +15,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.demo.springdemo.entity.User;
 import com.demo.springdemo.service.UserService;
 
 @Controller
+@SessionAttributes("userInfo")
 @RequestMapping("/user")
 public class UserController {
 
@@ -90,12 +92,11 @@ public class UserController {
 	}
 
 	@PostMapping("loginUser")
-	public String loginUser( @RequestParam("userId") String userId,BindingResult bindingResult, @RequestParam("Password") String password,
-			Model model) {
-		if (bindingResult.hasErrors()) {
+	public String loginUser(@RequestParam("userId") String userId,@RequestParam("userPassword") String password,Model model) {
+		/*if (bindingResult.hasErrors()) {
 
 			return "sign-up-form";
-		}else {
+		}else {*/
 			
 		
 		boolean validUser = userService.loginUser(userId, password);
@@ -111,7 +112,12 @@ public class UserController {
 			model.addAttribute("user", new User());
 			return "login-form";
 		}
-	}
+	//}
 
-}
+	}
+	
+	@ModelAttribute("userInfo")
+	 public User userInfo() {
+	  return new User();
+	 }
 }

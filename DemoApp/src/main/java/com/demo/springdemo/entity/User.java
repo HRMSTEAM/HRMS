@@ -18,7 +18,7 @@ public class User {
 	@Column(name = "user_id")
 	@NotNull(message = "is required")
 	@Size(min = 5, message = "User Id size must be greatr than 5")
-	private String userId="U00001";
+	private String userId;
 	
 	@Column(name="user_code")
 	private String userCode;

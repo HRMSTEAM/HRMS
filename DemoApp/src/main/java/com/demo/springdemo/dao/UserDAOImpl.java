@@ -54,18 +54,18 @@ public class UserDAOImpl implements UserDAO {
 		
 	}
 
-	public boolean loginUser(String userId, String password) {
+	public boolean loginUser(String userId, String userPassword) {
 		
 		boolean validUser = false;
 		
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		Query<User> theQuery = currentSession.createQuery("from User where userId=:userId and Password=:Password", User.class);
+		Query<User> theQuery = currentSession.createQuery("from User where userId=:userId and userPassword=:userPassword", User.class);
 		
 		theQuery.setParameter("userId", userId);
-		theQuery.setParameter("Password", password);
+		theQuery.setParameter("userPassword", userPassword);
 		
-		System.out.println("userId: "+userId+" Password"+password);
+		System.out.println("userId: "+userId+" userPassword"+userPassword);
 		
 		List<User> theList = theQuery.getResultList();
 		

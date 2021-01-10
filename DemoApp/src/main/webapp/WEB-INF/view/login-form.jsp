@@ -22,8 +22,8 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-3"><label>Password</label></div>
-				<div class="col-sm-3" ><form:input path="Password" class="form-control"  type="password" id="password"  /><img src="${pageContext.request.contextPath}/resources/images/eye.png" height="15"  onmouseover="mouseoverPass();" onmouseout="mouseoutPass();" /></div>
-			<form:errors path="Password" cssClass="error" />
+				<div class="col-sm-3" ><form:input path="userPassword" class="form-control"  type="password" id="password"  /><img src="${pageContext.request.contextPath}/resources/images/eye.png" height="15"  onmouseover="mouseoverPass();" onmouseout="mouseoutPass();" /></div>
+			<form:errors path="userPassword" cssClass="error" />
 			</div>
 			
 			<div class="row">
