@@ -121,76 +121,50 @@
 													<!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
 												</div>
 												<div class="card-block">
-													<form:form action="saveCompany" class="form-material row"
-														modelAttribute="company" method="POST">
+													<form:form action="saveCompany" class="form-material row" modelAttribute="company" method="POST">
 
-														<div
-															class="form-group form-default form-static-label col-sm-6">
+														<div class="form-group form-default form-static-label col-sm-6">
 															<form:input path="companyId" class="form-control" readonly="true" />
-
-															<!--   <input type="text" name="footer-email" class="form-control" placeholder="Enter User Name"> -->
 															<span class="form-bar"></span> <label class="float-label">Company ID</label>
 														</div>
 
-														<div
-															class="form-group form-default form-static-label col-sm-6">
+														<div class="form-group form-default form-static-label col-sm-6">
 															<form:input path="companyName" class="form-control" placeholder="Enter Company Name" />
-
-															<!--   <input type="text" name="footer-email" class="form-control" placeholder="Enter User Name"> -->
 															<span class="form-bar"></span> <label class="float-label">Company Name</label>
 														</div>
 
-														<div
-															class="form-group form-default form-static-label col-sm-6">
+														<div class="form-group form-default form-static-label col-sm-6">
 															<form:input path="companyAddress" class="form-control"  placeholder="Enter Company Address" />
-
-															<!--   <input type="text" name="footer-email" class="form-control" placeholder="Enter User Name"> -->
 															<span class="form-bar"></span> <label class="float-label">Company Address</label>
 														</div>
-														<div
-															class="form-group form-default form-static-label col-sm-6">
+														<div class="form-group form-default form-static-label col-sm-6">
 															<form:input path="companyPinCode" class="form-control" placeholder="Enter Company Pincode" />
-
-															<!--   <input type="text" name="footer-email" class="form-control" placeholder="Enter User Name"> -->
 															<span class="form-bar"></span> <label class="float-label">Company Pincode</label>
 														</div>
 
-														<div
-															class="form-group form-default form-static-label col-sm-6">
+														<div class="form-group form-default form-static-label col-sm-6">
 															<form:input path="companyCity" class="form-control" placeholder="Enter  City" />
-
-															<!--   <input type="text" name="footer-email" class="form-control" placeholder="Enter User Name"> -->
 															<span class="form-bar"></span> <label class="float-label">Company City</label>
 														</div>
 
-														<div
-															class="form-group form-default form-static-label col-sm-6">
+														<div class="form-group form-default form-static-label col-sm-6">
 															<form:input path="companyState" class="form-control" placeholder="Enter State" />
-
-															<!--   <input type="text" name="footer-email" class="form-control" placeholder="Enter User Name"> -->
 															<span class="form-bar"></span> <label class="float-label">Company State</label>
 														</div>
 
-														<div
-															class="form-group form-default form-static-label col-sm-6">
+														<div class="form-group form-default form-static-label col-sm-6">
 															<form:input path="country" class="form-control" placeholder="Enter Company Country" />
-
-															<!--   <input type="text" name="footer-email" class="form-control" placeholder="Enter User Name"> -->
 															<span class="form-bar"></span> <label class="float-label">Country</label>
 														</div>
 
-														<div
-															class="form-group form-default form-static-label col-sm-6">
+														<div class="form-group form-default form-static-label col-sm-6">
 															<form:input path="gstNo" class="form-control" placeholder="Enter Gst No" />
-
-															<!--   <input type="text" name="footer-email" class="form-control" placeholder="Enter User Name"> -->
 															<span class="form-bar"></span> <label class="float-label">Gst No</label>
 														</div>
 <br><br>
 														<div class="row">
 														<div class="col-md-2"></div>
 															<div class="col-md-2"></div>
-															
 															<div class="col-md-6">
 															<button class="btn btn-primary waves-effect waves-light">SAVE</button>
 															
