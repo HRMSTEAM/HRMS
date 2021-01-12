@@ -3,6 +3,7 @@ package com.demo.springdemo.entity;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -34,7 +35,7 @@ public class Department {
 	@Column(name = "status")
 	private String status;
 	
-	@ManyToOne(cascade= {CascadeType.ALL})
+	@ManyToOne(fetch = FetchType.LAZY,cascade= {CascadeType.ALL})
 	@JoinColumn(name="company_id")
 	private Company company;
 	
@@ -100,6 +101,12 @@ public class Department {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}public Branch getBranch() {
+		return branch;
+	}
+
+	public void setBranch(Branch branch) {
+		this.branch = branch;
 	}
 
 	public Company getCompany() {
@@ -108,14 +115,6 @@ public class Department {
 
 	public void setCompany(Company company) {
 		this.company = company;
-	}
-
-	public Branch getBranch() {
-		return branch;
-	}
-
-	public void setBranch(Branch branch) {
-		this.branch = branch;
 	}
 
 	@Override

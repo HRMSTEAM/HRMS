@@ -31,9 +31,9 @@ public class DepartmentDAOImpl implements DepartmentDAO {
 		Company company = currentSession.get(Company.class, department.getCompany().getCompanyId());		
 		department.setCompany(company);
 		
-		Branch branch = currentSession.get(Branch.class, department.getBranch().getBranchId());		
+		Branch branch = currentSession.get(Branch.class, department.getBranch().getBranchId());	
 		department.setBranch(branch);
-		
+				
 		currentSession.saveOrUpdate(department);
 	}
 	

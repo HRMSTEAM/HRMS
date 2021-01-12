@@ -65,9 +65,9 @@ public class DemoController {
 	
 	
 	@RequestMapping("user/ShowSignUpForm")
-	public String showSignUpForm(Model model, User user) {
+	public String showSignUpForm(Model model) {
 		
-		model.addAttribute("user", user);
+		model.addAttribute("user", new User());
 		return "sign-up-form";
 	}
 	

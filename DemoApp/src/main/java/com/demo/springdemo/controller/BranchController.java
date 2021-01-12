@@ -1,6 +1,5 @@
 package com.demo.springdemo.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,49 +37,39 @@ public class BranchController {
 		
 		return "branch-master";
 	}
-	/*@ModelAttribute("availableCompany")
-	   public List<String> getNumbersList() {
-	      List<String> numbersList = new ArrayList<String>();
-	      numbersList.add("Infosys123");
-	      numbersList.add("Capgemini");
-	      numbersList.add("SS");
-	      numbersList.add("C00001");
-	      return numbersList;
-	      
-	      
-
-	   }*/
-
-	/*@GetMapping("/list")
+	@GetMapping("/list")
 	public String listBranch(Model model) {
 
 		List<Branch> theBranch = branchService.getBranches();
 
-		model.addAttribute("users", theBranch);
+		model.addAttribute("branch", theBranch);
 
-		return "user-list";
+		return "branch-details";
 
 	}
-
+	
 	@GetMapping("/showFormForUpdate")
-	public String getBranch(@RequestParam("userId") String userId, Model model) {
+	public String getBranch(@RequestParam("branchId") String branchId, Model model) {
 
-		Branch user = branchService.getBranch(userId);
+		Branch branch = branchService.getBranch(branchId);
 
-		model.addAttribute("user", user);
+		model.addAttribute("branch", branch);
+		
+		List<Company> theCompany = companyService.getCompany();
+		model.addAttribute("availableCompany",theCompany);
 
-		return "sign-up-form";
+		return "branch-master";
 
 	}
 
 	@GetMapping("/deleteBranch")
-	public String deleteBranch(@RequestParam("userId") String userId, Model model) {
+	public String deleteBranch(@RequestParam("branchId") String branchId, Model model) {
 
-		branchService.deleteBranch(userId);
+		branchService.deleteBranch(branchId);
 
-		return "redirect:/user/list";
+		return "redirect:/branch/list";
 
-	}*/
+	}
 
 
 }

@@ -11,14 +11,21 @@
 </head>
 <body>
 	<jsp:include page="../include/header.jsp"></jsp:include>
-	<div class="container">	
+	<div class="container">
+		<p><a href="${pageContext.request.contextPath}/user/ShowSignUpForm">Add New User</a></p>
+			
+		<%-- <c:url var="updateLink" value="ShowSignUpForm">
+			<c:param name="userId" value=""></c:param>
+		</c:url>
+		
+		<a href="${updateLink}">Update</a>| --%>
+		
 		<h1>User List</h1>    
    		<table class="table table-hover">
    			<thead>
 			<tr>
 				<th>User Id</th>
 				<th>First Name</th>
-				<th>Middle Name</th>
 				<th>Last Name</th>
 				<th>Action</th>
 			</tr>
@@ -35,7 +42,6 @@
 				<tr>
 					<td> ${tempUser.userId} </td>
 					<td> ${tempUser.firstName} </td>
-					<td> ${tempUser.middleName} </td>
 					<td> ${tempUser.lastName} </td>
 					<td>
 						<a href="${updateLink}">Update</a>|
@@ -44,8 +50,7 @@
 				</tr>
 			</c:forEach>
 			</tbody>
-		</table>
-		<p><a href="${pageContext.request.contextPath}/index.jsp">Back to Home Page</a></p>
+		</table>		
 	</div>
 </body>
 </html>

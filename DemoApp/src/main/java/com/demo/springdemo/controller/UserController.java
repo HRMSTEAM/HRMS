@@ -21,7 +21,7 @@ import com.demo.springdemo.entity.User;
 import com.demo.springdemo.service.UserService;
 
 @Controller
-@SessionAttributes("userInfo")
+@SessionAttributes("user")
 @RequestMapping("/user")
 public class UserController {
 
@@ -67,7 +67,7 @@ public class UserController {
 
 		model.addAttribute("users", theUser);
 
-		return "user-list";
+		return "user-details";
 
 	}
 
@@ -103,8 +103,11 @@ public class UserController {
 
 		if (validUser) {
 			System.out.println("index");
+			
+			User user = userService.getUser(userId);
 
-			// model.addAttribute("user", u)
+			model.addAttribute("user", user);
+			
 			return "index";
 			// return "redirect:/homePage";
 		} else {
@@ -116,7 +119,7 @@ public class UserController {
 
 	}
 	
-	@ModelAttribute("userInfo")
+	@ModelAttribute("user")
 	 public User userInfo() {
 	  return new User();
 	 }

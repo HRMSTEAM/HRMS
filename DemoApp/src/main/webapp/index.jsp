@@ -38,74 +38,16 @@
 </head>
 
 <body>
-<%-- 	<jsp:include page="WEB-INF/include/includefile.jsp"></jsp:include>
- --%>		
-	
-    <!-- Pre-loader start -->
-    <div class="theme-loader">
-        <div class="loader-track">
-            <div class="preloader-wrapper">
-                <div class="spinner-layer spinner-blue">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="gap-patch">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-                <div class="spinner-layer spinner-red">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="gap-patch">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-
-                <div class="spinner-layer spinner-yellow">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="gap-patch">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-
-                <div class="spinner-layer spinner-green">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="gap-patch">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<!-- Pre-loader start -->
+	<jsp:include page="WEB-INF/include/spiner.jsp"></jsp:include>	
     <!-- Pre-loader end -->
     <div id="pcoded" class="pcoded">
         <div class="pcoded-overlay-box"></div>
-        <div class="pcoded-container navbar-wrapper">
-            
+        <div class="pcoded-container navbar-wrapper">            
 			<jsp:include page="WEB-INF/include/header.jsp"></jsp:include>
-
             <div class="pcoded-main-container">
-                <div class="pcoded-wrapper">
-                    
-                    <jsp:include page="WEB-INF/include/menu.jsp"></jsp:include>
-                    
+                <div class="pcoded-wrapper">                    
+                    <jsp:include page="WEB-INF/include/menu.jsp"></jsp:include>                    
                     <div class="pcoded-content">
                         <!-- Page-header start -->
                         <div class="page-header">

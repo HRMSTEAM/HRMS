@@ -23,10 +23,15 @@ public class User {
 	@Column(name="user_code")
 	private String userCode;
 	
-	@Column(name = "user_name")
+	@Column(name = "first_name")
 	@NotNull(message = "is required")
 	@Size(min = 1, message = "is required")
-	private  String userName;
+	private  String firstName;
+	
+	@Column(name = "last_name")
+	@NotNull(message = "is required")
+	@Size(min = 1, message = "is required")
+	private  String lastName;
 
 	@NotNull(message = "is required")
 	@Size(min = 8, message = "minimum 8 charaters and alphabets required")
@@ -51,6 +56,15 @@ public class User {
 	
 	@Column(name="user_pincode")
 	private String userPincode;
+	
+	@Column(name="user_city")
+	private String userCity;
+	
+	@Column(name="user_state")
+	private String userState;
+	
+	@Column(name="user_country")
+	private String userCountry;
 	
 	@Column(name = "created_by")
 	private String createdBy;
@@ -79,6 +93,10 @@ public class User {
 	@JoinColumn(name="department_id")
 	private Department department;	
 
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getUserId() {
 		return userId;
 	}
@@ -95,12 +113,20 @@ public class User {
 		this.userCode = userCode;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getUserPassword() {
@@ -151,61 +177,73 @@ public class User {
 		this.userAddress = userAddress;
 	}
 
-
 	public String getUserPincode() {
 		return userPincode;
 	}
-
 
 	public void setUserPincode(String userPincode) {
 		this.userPincode = userPincode;
 	}
 
+	public String getUserCity() {
+		return userCity;
+	}
+
+	public void setUserCity(String userCity) {
+		this.userCity = userCity;
+	}
+
+	public String getUserState() {
+		return userState;
+	}
+
+	public void setUserState(String userState) {
+		this.userState = userState;
+	}
+
+	public String getUserCountry() {
+		return userCountry;
+	}
+
+	public void setUserCountry(String userCountry) {
+		this.userCountry = userCountry;
+	}
 
 	public String getCreatedBy() {
 		return createdBy;
 	}
 
-
 	public void setCreatedBy(String createdBy) {
 		this.createdBy = createdBy;
 	}
-
 
 	public String getCreatedDate() {
 		return createdDate;
 	}
 
-
 	public void setCreatedDate(String createdDate) {
 		this.createdDate = createdDate;
 	}
-
 
 	public String getDeletedBy() {
 		return deletedBy;
 	}
 
-
 	public void setDeletedBy(String deletedBy) {
 		this.deletedBy = deletedBy;
 	}
-
 
 	public String getDeletedDate() {
 		return deletedDate;
 	}
 
-
 	public void setDeletedDate(String deletedDate) {
 		this.deletedDate = deletedDate;
 	}
 
-
 	public String getStatus() {
 		return status;
 	}
-
 
 	public void setStatus(String status) {
 		this.status = status;
@@ -237,13 +275,12 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", userCode=" + userCode + ", userName=" + userName + ", userPassword="
-				+ userPassword + ", mobileNo=" + mobileNo + ", emailId=" + emailId + ", dateOfBirth=" + dateOfBirth
-				+ ", gender=" + gender + ", userAddress=" + userAddress + ", userPincode=" + userPincode
-				+ ", createdBy=" + createdBy + ", createdDate=" + createdDate + ", deletedBy=" + deletedBy
-				+ ", deletedDate=" + deletedDate + ", status=" + status + ", company=" + company + ", branch=" + branch
-				+ ", department=" + department + "]";
+		return "User [userId=" + userId + ", userCode=" + userCode + ", firstName=" + firstName + ", lastName="
+				+ lastName + ", userPassword=" + userPassword + ", mobileNo=" + mobileNo + ", emailId=" + emailId
+				+ ", dateOfBirth=" + dateOfBirth + ", gender=" + gender + ", userAddress=" + userAddress
+				+ ", userPincode=" + userPincode + ", userCity=" + userCity + ", userState=" + userState
+				+ ", userCountry=" + userCountry + ", createdBy=" + createdBy + ", createdDate=" + createdDate
+				+ ", deletedBy=" + deletedBy + ", deletedDate=" + deletedDate + ", status=" + status + ", company="
+				+ company + ", branch=" + branch + ", department=" + department + "]";
 	}
-	
-	
 }

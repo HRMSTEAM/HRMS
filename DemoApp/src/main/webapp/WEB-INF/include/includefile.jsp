@@ -1,14 +1,14 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<%-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
 
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/style.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/style.js"></script> --%>
 
 
-<link rel="icon" href="${pageContext.request.contextPath}/resources/assets/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="${pageContext.request.contextPath}/resources/assets/images/favicon.ico" type="image/x-icon">
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     <!-- waves.css -->
@@ -47,3 +47,4 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/assets/js/vertical/vertical-layout.min.js "></script>
 
     <script type="text/javascript" type="text/javascript" src="${pageContext.request.contextPath}/resources/assets/js/script.js "></script>
+    

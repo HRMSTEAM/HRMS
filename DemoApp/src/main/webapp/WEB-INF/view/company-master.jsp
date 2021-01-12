@@ -1,93 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
 <head>
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-<meta name="keywords"
-	content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
-<meta name="author" content="Codedthemes" />
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Company Master</title>
-
 </head>
 <body>
-
-	<div class="theme-loader">
-		<div class="loader-track">
-			<div class="preloader-wrapper">
-				<div class="spinner-layer spinner-blue">
-					<div class="circle-clipper left">
-						<div class="circle"></div>
-					</div>
-					<div class="gap-patch">
-						<div class="circle"></div>
-					</div>
-					<div class="circle-clipper right">
-						<div class="circle"></div>
-					</div>
-				</div>
-				<div class="spinner-layer spinner-red">
-					<div class="circle-clipper left">
-						<div class="circle"></div>
-					</div>
-					<div class="gap-patch">
-						<div class="circle"></div>
-					</div>
-					<div class="circle-clipper right">
-						<div class="circle"></div>
-					</div>
-				</div>
-
-				<div class="spinner-layer spinner-yellow">
-					<div class="circle-clipper left">
-						<div class="circle"></div>
-					</div>
-					<div class="gap-patch">
-						<div class="circle"></div>
-					</div>
-					<div class="circle-clipper right">
-						<div class="circle"></div>
-					</div>
-				</div>
-
-				<div class="spinner-layer spinner-green">
-					<div class="circle-clipper left">
-						<div class="circle"></div>
-					</div>
-					<div class="gap-patch">
-						<div class="circle"></div>
-					</div>
-					<div class="circle-clipper right">
-						<div class="circle"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<jsp:include page="../include/spiner.jsp"></jsp:include>
 	<!-- Pre-loader end -->
 	<div id="pcoded" class="pcoded">
 		<div class="pcoded-overlay-box"></div>
 		<div class="pcoded-container navbar-wrapper">
-
 			<jsp:include page="../include/header.jsp"></jsp:include>
-
 			<div class="pcoded-main-container">
 				<div class="pcoded-wrapper">
-
 					<jsp:include page="../include/menu.jsp"></jsp:include>
-
 					<div class="pcoded-content">
 						<!-- Page-header start -->
-						<div class="page-header">
+						<!-- <div class="page-header">
 							<div class="page-block">
 								<div class="row align-items-center">
 									<div class="col-md-8">
@@ -106,7 +37,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<!-- Page-header end -->
 						<div class="pcoded-inner-content">
 							<!-- Main-body start -->
@@ -117,7 +48,8 @@
 										<div class="col-md-12">
 											<div class="card">
 												<div class="card-header">
-													<h5>Company</h5>
+													<h5>Company Master</h5>
+													<div class="card-header-right"><a href="${pageContext.request.contextPath}/company/list">Company Details</a></div>
 													<!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
 												</div>
 												<div class="card-block">
@@ -161,14 +93,10 @@
 															<form:input path="gstNo" class="form-control" placeholder="Enter Gst No" />
 															<span class="form-bar"></span> <label class="float-label">Gst No</label>
 														</div>
-<br><br>
-														<div class="row">
-														<div class="col-md-2"></div>
-															<div class="col-md-2"></div>
-															<div class="col-md-6">
-															<button class="btn btn-primary waves-effect waves-light">SAVE</button>
-															
-															</div>
+														<br><br>
+														<div class="form-group form-default form-static-label col-sm-12" align="center">
+															<button class="btn btn-primary waves-effect waves-light">Save</button>
+															<button class="btn btn-primary waves-effect waves-light">Clear</button>
 														</div>
 													</form:form>
 												</div>
@@ -185,8 +113,6 @@
 			</div>
 		</div>
 	</div>
-	</div>
-
 </body>
 </html>
 

@@ -33,7 +33,7 @@ public class CompanyController {
 		
 		List<Company> theCompany = companyService.getCompany();
 		model.addAttribute("company", theCompany);
-		return "user-list";
+		return "company-details";
 	}
 	
 	@GetMapping("/showFormForUpdate")
@@ -42,6 +42,15 @@ public class CompanyController {
 		Company company = companyService.getCompany(companyId);
 		model.addAttribute("company", company);
 		return "company-master";
+	}
+	
+	@GetMapping("/deleteCompany")
+	public String deleteBranch(@RequestParam("companyId") String companyId, Model model) {
+
+		companyService.deleteCompany(companyId);
+
+		return "redirect:/company/list";
+
 	}
 
 }

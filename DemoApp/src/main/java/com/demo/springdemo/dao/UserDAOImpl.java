@@ -14,9 +14,7 @@ import com.demo.springdemo.entity.User;
 public class UserDAOImpl implements UserDAO {
 
 	@Autowired
-	SessionFactory sessionFactory;
-	
-	
+	SessionFactory sessionFactory;	
 	
 	public void saveUser(User user) {
 		

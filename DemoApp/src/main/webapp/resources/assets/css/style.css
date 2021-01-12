@@ -6736,7 +6736,7 @@ body.menu-bottom #collapse-menu {
 	border-radius: 2px;
 	text-transform: capitalize;
 	font-size: 15px;
-	padding: 10px 19px;
+	padding: 7px 40px;
 	cursor: pointer;
 }
 
@@ -9086,7 +9086,7 @@ body.menu-bottom #collapse-menu {
 	width: 100%;
 	border: none;
 	border-radius: 0;
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: 400;
 	padding: 0;
 	background-color: transparent;
@@ -9646,7 +9646,7 @@ span.badge {
 
 .table td,
 .table th {
-	padding: 1.25rem 0.75rem;
+	padding: 0.75rem 0.75rem;
 }
 
 .table thead th {

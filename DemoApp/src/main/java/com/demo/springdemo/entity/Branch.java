@@ -3,6 +3,7 @@ package com.demo.springdemo.entity;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -30,7 +31,7 @@ public class Branch {
 	private String branchState;
 
 	@Column(name = "branch_pincode") 
-	private String branchPincode;
+	private String branchPinCode;
 	
 	
 	@Column(name = "created_by")
@@ -105,13 +106,13 @@ public class Branch {
 	}
 
 
-	public String getBranchPincode() {
-		return branchPincode;
+	public String getBranchPinCode() {
+		return branchPinCode;
 	}
 
 
-	public void setBranchPincode(String branchPincode) {
-		this.branchPincode = branchPincode;
+	public void setBranchPinCode(String branchPinCode) {
+		this.branchPinCode = branchPinCode;
 	}
 
 
@@ -175,7 +176,7 @@ public class Branch {
 	@Override
 	public String toString() {
 		return "Branch [branchId=" + branchId + ", branchName=" + branchName + ", branchAddress=" + branchAddress
-				+ ", branchCity=" + branchCity + ", branchState=" + branchState + ", branchPincode=" + branchPincode
+				+ ", branchCity=" + branchCity + ", branchState=" + branchState + ", branchPinCode=" + branchPinCode
 				+ ", createdBy=" + createdBy + ", createdDate=" + createdDate + ", deletedBy=" + deletedBy
 				+ ", deletedDate=" + deletedDate + ", status=" + status + ", company=" + company + "]";
 	}

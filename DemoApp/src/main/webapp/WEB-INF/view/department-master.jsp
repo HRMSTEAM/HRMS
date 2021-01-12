@@ -13,7 +13,7 @@
 <body>
 	<jsp:include page="../include/header.jsp"></jsp:include>
 	<div class="container">
-		<h1>Department</h1>
+		<h1>Department ${department}</h1>
 		<p>Please fill in this form to create new Department.</p>
 		<form:form action="saveDepartment" modelAttribute="department" method="POST">
 			<div class="row">
