@@ -1,9 +1,7 @@
 package com.demo.springdemo.entity;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -19,7 +17,6 @@ public class Branch {
 
  	@Column(name = "branch_name")
  	private String branchName;
-
 	
 	@Column(name = "branch_address")
 	private String branchAddress;
@@ -31,8 +28,7 @@ public class Branch {
 	private String branchState;
 
 	@Column(name = "branch_pincode") 
-	private String branchPinCode;
-	
+	private String branchPinCode;	
 	
 	@Column(name = "created_by")
 	private String createdBy;
@@ -49,7 +45,7 @@ public class Branch {
 	@Column(name = "status")
 	private String status;
 	
-	@ManyToOne(cascade= {CascadeType.ALL})
+	@ManyToOne
 	@JoinColumn(name="company_id")
 	private Company company;
 
@@ -65,91 +61,74 @@ public class Branch {
 		this.branchId = branchId;
 	}
 
-
 	public String getBranchName() {
 		return branchName;
 	}
-
 
 	public void setBranchName(String branchName) {
 		this.branchName = branchName;
 	}
 
-
 	public String getBranchAddress() {
 		return branchAddress;
 	}
-
 
 	public void setBranchAddress(String branchAddress) {
 		this.branchAddress = branchAddress;
 	}
 
-
 	public String getBranchCity() {
 		return branchCity;
 	}
-
 
 	public void setBranchCity(String branchCity) {
 		this.branchCity = branchCity;
 	}
 
-
 	public String getBranchState() {
 		return branchState;
 	}
-
 
 	public void setBranchState(String branchState) {
 		this.branchState = branchState;
 	}
 
-
 	public String getBranchPinCode() {
 		return branchPinCode;
 	}
-
 
 	public void setBranchPinCode(String branchPinCode) {
 		this.branchPinCode = branchPinCode;
 	}
 
-
 	public String getCreatedBy() {
 		return createdBy;
 	}
-
 
 	public void setCreatedBy(String createdBy) {
 		this.createdBy = createdBy;
 	}
 
-
 	public String getCreatedDate() {
 		return createdDate;
 	}
-
 
 	public void setCreatedDate(String createdDate) {
 		this.createdDate = createdDate;
 	}
 
-
 	public String getDeletedBy() {
 		return deletedBy;
 	}
-
 
 	public void setDeletedBy(String deletedBy) {
 		this.deletedBy = deletedBy;
 	}
 
-
 	public String getDeletedDate() {
 		return deletedDate;
 	}
-
+	
 	public void setDeletedDate(String deletedDate) {
 		this.deletedDate = deletedDate;
 	}

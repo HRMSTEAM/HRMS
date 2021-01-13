@@ -1,6 +1,5 @@
 package com.demo.springdemo.entity;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -81,15 +80,15 @@ public class User {
 	@Column(name = "status")
 	private String status;
 
-	@ManyToOne(cascade= {CascadeType.ALL})
+	@ManyToOne
 	@JoinColumn(name="company_id")
 	private Company company;
 	
-	@ManyToOne(cascade= {CascadeType.ALL})
+	@ManyToOne
 	@JoinColumn(name="branch_id")
 	private Branch branch;
 
-	@ManyToOne(cascade= {CascadeType.ALL})
+	@ManyToOne
 	@JoinColumn(name="department_id")
 	private Department department;	
 

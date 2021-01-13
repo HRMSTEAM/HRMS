@@ -11,8 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.demo.springdemo.entity.Department;
-import com.demo.springdemo.entity.Branch;
-import com.demo.springdemo.entity.Company;
 
 @Repository
 public class DepartmentDAOImpl implements DepartmentDAO {
@@ -28,12 +26,6 @@ public class DepartmentDAOImpl implements DepartmentDAO {
 			department.setDepartmentId(getMaxId());
 		}
 		
-		Company company = currentSession.get(Company.class, department.getCompany().getCompanyId());		
-		department.setCompany(company);
-		
-		Branch branch = currentSession.get(Branch.class, department.getBranch().getBranchId());	
-		department.setBranch(branch);
-				
 		currentSession.saveOrUpdate(department);
 	}
 	

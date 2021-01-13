@@ -4,9 +4,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.demo.springdemo.entity.Department;
@@ -45,49 +47,37 @@ public class DepartmentController {
 		
 		return "department-master";
 	}
-	/*@ModelAttribute("availableCompany")
-	   public List<String> getNumbersList() {
-	      List<String> numbersList = new ArrayList<String>();
-	      numbersList.add("Infosys123");
-	      numbersList.add("Capgemini");
-	      numbersList.add("SS");
-	      numbersList.add("C00001");
-	      return numbersList;
-	      
-	      
-
-	   }*/
-
-	/*@GetMapping("/list")
+	
+	@GetMapping("/details")
 	public String listDepartment(Model model) {
 
 		List<Department> theDepartment = departmentService.getDepartmentes();
 
-		model.addAttribute("users", theDepartment);
+		model.addAttribute("department", theDepartment);
 
-		return "user-list";
+		return "department-details";
 
 	}
 
 	@GetMapping("/showFormForUpdate")
-	public String getDepartment(@RequestParam("userId") String userId, Model model) {
+	public String getDepartment(@RequestParam("departmentId") String departmentId, Model model) {
 
-		Department user = departmentService.getDepartment(userId);
+		Department department = departmentService.getDepartment(departmentId);
 
-		model.addAttribute("user", user);
+		model.addAttribute("department", department);
 
-		return "sign-up-form";
+		return "department-master";
 
 	}
 
 	@GetMapping("/deleteDepartment")
-	public String deleteDepartment(@RequestParam("userId") String userId, Model model) {
+	public String deleteDepartment(@RequestParam("departmentId") String departmentId, Model model) {
 
-		departmentService.deleteDepartment(userId);
+		departmentService.deleteDepartment(departmentId);
 
-		return "redirect:/user/list";
+		return "redirect:/department/details";
 
-	}*/
+	}
 
 
 }

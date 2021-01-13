@@ -93,6 +93,7 @@
 															<form:input path="gstNo" class="form-control" placeholder="Enter Gst No" />
 															<span class="form-bar"></span> <label class="float-label">Gst No</label>
 														</div>
+														
 														<br><br>
 														<div class="form-group form-default form-static-label col-sm-12" align="center">
 															<button class="btn btn-primary waves-effect waves-light">Save</button>

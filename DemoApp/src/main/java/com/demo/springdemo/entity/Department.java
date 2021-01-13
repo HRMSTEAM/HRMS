@@ -3,7 +3,6 @@ package com.demo.springdemo.entity;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -35,11 +34,11 @@ public class Department {
 	@Column(name = "status")
 	private String status;
 	
-	@ManyToOne(fetch = FetchType.LAZY,cascade= {CascadeType.ALL})
+	@ManyToOne
 	@JoinColumn(name="company_id")
 	private Company company;
 	
-	@ManyToOne(cascade= {CascadeType.ALL})
+	@ManyToOne
 	@JoinColumn(name="branch_id")
 	private Branch branch;
 	

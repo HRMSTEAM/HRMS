@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.demo.springdemo.entity.Branch;
-import com.demo.springdemo.entity.Company;
 
 @Repository
 public class BranchDAOImpl implements BranchDAO {
@@ -26,9 +25,6 @@ public class BranchDAOImpl implements BranchDAO {
 		if(branch.getBranchId().equals("") || branch.getBranchId()==null){
 			branch.setBranchId(getMaxId());
 		}
-		
-		Company company = currentSession.get(Company.class, branch.getCompany().getCompanyId());		
-		branch.setCompany(company);
 		
 		currentSession.saveOrUpdate(branch);
 	}
