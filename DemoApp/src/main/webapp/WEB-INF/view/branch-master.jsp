@@ -93,7 +93,7 @@
 														<br><br>
 														<div class="form-group form-default form-static-label col-sm-12" align="center">
 															<button class="btn btn-primary waves-effect waves-light">Save</button>
-															<button class="btn btn-primary waves-effect waves-light">Clear</button>
+															<button class="btn btn-primary waves-effect waves-light"  type="reset" value="CLEAR" onClick="window.location.reload()" >Clear</button>
 														</div>
 													</form:form>
 												</div>

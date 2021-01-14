@@ -49,8 +49,10 @@
 											<div class="card">
 												<div class="card-header">
 													<h5>Company Master</h5>
-													<div class="card-header-right"><a href="${pageContext.request.contextPath}/company/list">Company Details</a></div>
-													<!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
+													
+													
+													<%-- <div class="card-header-right"><a href="${pageContext.request.contextPath}/company/list">Company Details</a></div> --%>
+													<span class="form-txt-success">${successMsg}</span>
 												</div>
 												<div class="card-block">
 													<form:form action="saveCompany" class="form-material row" modelAttribute="company" method="POST">
@@ -96,10 +98,13 @@
 														
 														<br><br>
 														<div class="form-group form-default form-static-label col-sm-12" align="center">
-															<button class="btn btn-primary waves-effect waves-light">Save</button>
-															<button class="btn btn-primary waves-effect waves-light">Clear</button>
+															<input type="submit" name="action" value="Save" class="btn btn-primary waves-effect waves-light">
+															<input type="submit" name="action" value="Clear" class="btn btn-primary waves-effect waves-light">
+														<input type="submit" name="action" value="Close" class="btn btn-primary waves-effect waves-light">
+													
 														</div>
 													</form:form>
+												
 												</div>
 											</div>
 										</div>

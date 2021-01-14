@@ -21,11 +21,22 @@ public class CompanyController {
 	private CompanyService companyService;
 	
 	@PostMapping("/saveCompany")
-	public String saveBranch(@ModelAttribute("company") Company company, Model model) {
+	public String saveBranch(@ModelAttribute("company") Company company, @RequestParam("action") String action, Model model) {
 	
-		companyService.saveCompany(company);
-		model.addAttribute("company", company);
-		return "company-master";
+		if(action.equals("Save")) {
+			companyService.saveCompany(company);
+			model.addAttribute("company", company);
+		    model.addAttribute("successMsg", 	"Company Registered Successfully");
+			return "company-master";
+		} else if(action.equals("Clear")) {
+			return "redirect:ShowCompanyMasterForm";
+		} else if(action.equals("Close")) {
+			return "redirect:list";
+		}else {
+			return "redirect:ShowCompanyMasterForm";
+		}
+		
+		
 	}
 
 	@GetMapping("/list")
