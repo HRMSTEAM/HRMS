@@ -59,40 +59,42 @@
 
 														<div class="form-group form-default form-static-label col-sm-6">
 															<form:input path="companyId" class="form-control" readonly="true" />
+
 															<span class="form-bar"></span> <label class="float-label">Company ID</label>
 														</div>
+														
 
 														<div class="form-group form-default form-static-label col-sm-6">
-															<form:input path="companyName" class="form-control" placeholder="Enter Company Name" />
+															<form:input path="companyName" class="form-control" />
 															<span class="form-bar"></span> <label class="float-label">Company Name</label>
 														</div>
 
 														<div class="form-group form-default form-static-label col-sm-6">
-															<form:input path="companyAddress" class="form-control"  placeholder="Enter Company Address" />
+															<form:input path="companyAddress" class="form-control"/>
 															<span class="form-bar"></span> <label class="float-label">Company Address</label>
 														</div>
 														<div class="form-group form-default form-static-label col-sm-6">
-															<form:input path="companyPinCode" class="form-control" placeholder="Enter Company Pincode" />
+															<form:input path="companyPinCode" class="form-control"/>
 															<span class="form-bar"></span> <label class="float-label">Company Pincode</label>
 														</div>
 
 														<div class="form-group form-default form-static-label col-sm-6">
-															<form:input path="companyCity" class="form-control" placeholder="Enter  City" />
+															<form:input path="companyCity" class="form-control"/>
 															<span class="form-bar"></span> <label class="float-label">Company City</label>
 														</div>
 
 														<div class="form-group form-default form-static-label col-sm-6">
-															<form:input path="companyState" class="form-control" placeholder="Enter State" />
+															<form:input path="companyState" class="form-control"/>
 															<span class="form-bar"></span> <label class="float-label">Company State</label>
 														</div>
 
 														<div class="form-group form-default form-static-label col-sm-6">
-															<form:input path="country" class="form-control" placeholder="Enter Company Country" />
+															<form:input path="country" class="form-control"/>
 															<span class="form-bar"></span> <label class="float-label">Country</label>
 														</div>
 
 														<div class="form-group form-default form-static-label col-sm-6">
-															<form:input path="gstNo" class="form-control" placeholder="Enter Gst No" />
+															<form:input path="gstNo" class="form-control"/>
 															<span class="form-bar"></span> <label class="float-label">Gst No</label>
 														</div>
 														

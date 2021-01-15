@@ -9077,7 +9077,7 @@ body.menu-bottom #collapse-menu {
 
 .form-material .form-group.form-static-label .form-control~.float-label {
 	top: -14px;
-	font-size: 11px;
+	font-size: 13px;
 }
 
 .form-material .form-control {
@@ -9296,7 +9296,7 @@ body.menu-bottom #collapse-menu {
 }
 
 .form-material .form-default.form-static-label .float-label {
-	color: #d6d6d6;
+	color: #9ca3a9;
 }
 
 .form-material .form-default.form-static-label .form-control {
