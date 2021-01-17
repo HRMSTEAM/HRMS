@@ -26,27 +26,29 @@ public class BranchController {
 	private CompanyService companyService;
 
 	@PostMapping("/saveBranch")
-	public String saveBranch(@ModelAttribute("branch") Branch branch, Model model) {
+	public String saveBranch(@ModelAttribute("branch") Branch branch, @RequestParam("action") String action, Model model) {
 	
-		branchService.saveBranch(branch);
-
-		model.addAttribute("branch", branch);	
+		if(action.equals("Save")) {
+			branchService.saveBranch(branch);
+	
+			model.addAttribute("branch", branch);	
+			
+			List<Company> theCompany = companyService.getCompany();
+			model.addAttribute("availableCompany",theCompany);		
 		
-		List<Company> theCompany = companyService.getCompany();
-		model.addAttribute("availableCompany",theCompany);
-		
-		return "branch-master";
-	}
-	@GetMapping("/list")
-	public String listBranch(Model model) {
-
-		List<Branch> theBranch = branchService.getBranches();
-
-		model.addAttribute("branch", theBranch);
-
-		return "branch-details";
-
-	}
+			model.addAttribute("successMsg", "Branch Registered Successfully");
+			return "branch-master";
+		} 
+		else if(action.equals("Clear")) {
+			return "redirect:ShowBranchMasterForm";
+		} 
+		else if(action.equals("Close")) {
+			return "redirect:details";
+		}
+		else {
+			return "redirect:ShowBranchMasterForm";
+		}
+	}	
 	
 	@GetMapping("/showFormForUpdate")
 	public String getBranch(@RequestParam("branchId") String branchId, Model model) {
@@ -59,7 +61,27 @@ public class BranchController {
 		model.addAttribute("availableCompany",theCompany);
 
 		return "branch-master";
+	}
+	
+	@RequestMapping("/ShowBranchMasterForm")
+	public String showBranchMasterForm(Model model, Branch branch) {
+		
+		model.addAttribute("branch", branch);
+		
+		List<Company> theCompany = companyService.getCompany();
+		model.addAttribute("availableCompany",theCompany);
+				
+		return "branch-master";
+	}
+	
+	@GetMapping("/details")
+	public String detailsBranch(Model model) {
 
+		List<Branch> theBranch = branchService.getBranches();
+
+		model.addAttribute("branch", theBranch);
+
+		return "branch-details";
 	}
 
 	@GetMapping("/deleteBranch")
@@ -67,9 +89,6 @@ public class BranchController {
 
 		branchService.deleteBranch(branchId);
 
-		return "redirect:/branch/list";
-
+		return "redirect:/branch/details";
 	}
-
-
 }

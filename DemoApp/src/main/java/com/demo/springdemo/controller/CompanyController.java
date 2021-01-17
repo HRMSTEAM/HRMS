@@ -28,23 +28,16 @@ public class CompanyController {
 			model.addAttribute("company", company);
 		    model.addAttribute("successMsg", 	"Company Registered Successfully");
 			return "company-master";
-		} else if(action.equals("Clear")) {
+		} 
+		else if(action.equals("Clear")) {
 			return "redirect:ShowCompanyMasterForm";
-		} else if(action.equals("Close")) {
-			return "redirect:list";
-		}else {
+		} 
+		else if(action.equals("Close")) {
+			return "redirect:details";
+		}
+		else {
 			return "redirect:ShowCompanyMasterForm";
 		}
-		
-		
-	}
-
-	@GetMapping("/list")
-	public String listCompany(Model model) {
-		
-		List<Company> theCompany = companyService.getCompany();
-		model.addAttribute("company", theCompany);
-		return "company-details";
 	}
 	
 	@GetMapping("/showFormForUpdate")
@@ -55,13 +48,27 @@ public class CompanyController {
 		return "company-master";
 	}
 	
+	@RequestMapping("ShowCompanyMasterForm")
+	public String showCompanyMasterForm(Model model, Company company) {
+		
+		model.addAttribute("company", company);
+				
+		return "company-master";
+	}
+
+	@GetMapping("/details")
+	public String detailsCompany(Model model) {
+		
+		List<Company> theCompany = companyService.getCompany();
+		model.addAttribute("company", theCompany);
+		return "company-details";
+	}
+	
 	@GetMapping("/deleteCompany")
 	public String deleteBranch(@RequestParam("companyId") String companyId, Model model) {
 
 		companyService.deleteCompany(companyId);
 
-		return "redirect:/company/list";
-
+		return "redirect:/company/details";
 	}
-
 }

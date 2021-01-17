@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Department Master</title>
+<title>User Master</title>
 </head>
 <body>
 	<jsp:include page="../include/spiner.jsp"></jsp:include>
@@ -48,22 +48,64 @@
 										<div class="col-md-12">
 											<div class="card">
 												<div class="card-header">
-													<h5>Department Master</h5>
+													<h5>User Master</h5>													
 													<span class="form-txt-success">${successMsg}</span>
 												</div>
 												<div class="card-block">
-													<form:form action="saveDepartment" class="form-material row" modelAttribute="department" method="POST">
+													<form:form action="saveUser" class="form-material row" modelAttribute="user" method="POST">
 
 														<div class="form-group form-default form-static-label col-sm-6">
-															<form:input path="departmentId" class="form-control" readonly="true" />
-															<span class="form-bar"></span> <label class="float-label">Department ID</label>
+															<form:input path="userId" class="form-control"/>
+															<span class="form-bar"></span> <label class="float-label">User ID</label>
+														</div>
+														<div class="form-group form-default form-static-label col-sm-6">
+															<form:input path="userCode" class="form-control" />
+															<span class="form-bar"></span> <label class="float-label">User Code</label>
+														</div>
+														<div class="form-group form-default form-static-label col-sm-6">
+															<form:input path="firstName" class="form-control" />
+															<span class="form-bar"></span> <label class="float-label">First Name</label>
 														</div>
 
 														<div class="form-group form-default form-static-label col-sm-6">
-															<form:input path="departmentName" class="form-control" placeholder="Enter Department Name" />
-															<span class="form-bar"></span> <label class="float-label">Department Name</label>
+															<form:input path="lastName" class="form-control"/>
+															<span class="form-bar"></span> <label class="float-label">Last Name</label>
 														</div>
-														
+														<div class="form-group form-default form-static-label col-sm-6">
+															<form:input path="emailId" class="form-control"/>
+															<span class="form-bar"></span> <label class="float-label">Email Id</label>
+														</div>
+
+														<div class="form-group form-default form-static-label col-sm-6">
+															<form:input path="mobileNo" class="form-control"/>
+															<span class="form-bar"></span> <label class="float-label">Mobile No</label>
+														</div>
+														<div class="form-group form-default form-static-label col-sm-6">
+															<form:input path="dateOfBirth" class="form-control"/>
+															<span class="form-bar"></span> <label class="float-label">DOB</label>
+														</div>
+
+														<div class="form-group form-default form-static-label col-sm-6">
+															<form:input path="userAddress" class="form-control"/>
+															<span class="form-bar"></span> <label class="float-label">Address</label>
+														</div>
+
+														<div class="form-group form-default form-static-label col-sm-6">
+															<form:input path="userPincode" class="form-control"/>
+															<span class="form-bar"></span> <label class="float-label">Pin Code</label>
+														</div>
+														<div class="form-group form-default form-static-label col-sm-6">
+															<form:input path="userCity" class="form-control"/>
+															<span class="form-bar"></span> <label class="float-label">City</label>
+														</div>
+														<div class="form-group form-default form-static-label col-sm-6">
+															<form:input path="userState" class="form-control"/>
+															<span class="form-bar"></span> <label class="float-label">State</label>
+														</div>
+														<div class="form-group form-default form-static-label col-sm-6">
+															<form:input path="userCountry" class="form-control"/>
+															<span class="form-bar"></span> <label class="float-label">Country</label>
+														</div>	
 														<div class="form-group form-default form-static-label col-sm-6">
 															<form:select path="company.companyId" class="form-control">
 																<form:options items="${companyList}" itemValue="companyId" itemLabel="companyName"/>  
@@ -77,13 +119,20 @@
 															</form:select>
 															<span class="form-bar"></span> <label class="float-label">Branch Name</label>
 														</div>
+														<div class="form-group form-default form-static-label col-sm-6">
+															<form:select path="department.departmentId" class="form-control">
+																<form:options items="${departmentList}" itemValue="departmentId" itemLabel="departmentName"/>  
+															</form:select>
+															<span class="form-bar"></span> <label class="float-label">Department Name</label>
+														</div>
+														
 														<br><br>
 														<div class="form-group form-default form-static-label col-sm-12" align="center">
 															<input type="submit" name="action" value="Save" class="btn btn-primary waves-effect waves-light">
 															<input type="submit" name="action" value="Clear" class="btn btn-primary waves-effect waves-light">
 															<input type="submit" name="action" value="Close" class="btn btn-primary waves-effect waves-light">
 														</div>
-													</form:form>
+													</form:form>												
 												</div>
 											</div>
 										</div>
@@ -100,3 +149,6 @@
 	</div>
 </body>
 </html>
+
+
+

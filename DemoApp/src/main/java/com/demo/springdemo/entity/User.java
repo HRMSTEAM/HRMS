@@ -15,25 +15,17 @@ public class User {
 
 	@Id
 	@Column(name = "user_id")
-	@NotNull(message = "is required")
-	@Size(min = 5, message = "User Id size must be greatr than 5")
 	private String userId;
 	
 	@Column(name="user_code")
 	private String userCode;
 	
 	@Column(name = "first_name")
-	@NotNull(message = "is required")
-	@Size(min = 1, message = "is required")
 	private  String firstName;
 	
 	@Column(name = "last_name")
-	@NotNull(message = "is required")
-	@Size(min = 1, message = "is required")
 	private  String lastName;
 
-	@NotNull(message = "is required")
-	@Size(min = 8, message = "minimum 8 charaters and alphabets required")
 	@Column(name = "user_password")
 	private String userPassword;
 
@@ -47,7 +39,6 @@ public class User {
 	private String dateOfBirth;
 	
 	@Column(name = "gender")
-	@NotNull(message = "Please select gender")
 	private String gender;
 	
 	@Column(name="user_address")

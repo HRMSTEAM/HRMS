@@ -13646,7 +13646,10 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
 .warning-colorr ul li:nth-child(1) p:before {
 	content: "#f9e596";
 }
-
+.form-control:disabled, .form-control[readonly]{
+		background-color: #f3f3f3;
+	
+}
 
 /**====== Warning-color css end ======**/
 

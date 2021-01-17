@@ -22,8 +22,8 @@ public class DepartmentServiceImpl implements DepartmentService {
 	}
 
 	@Transactional
-	public List<Department> getDepartmentes() {
-		return departmentDAO.getDepartmentes();
+	public List<Department> getDepartments() {
+		return departmentDAO.getDepartments();
 	}
 
 	@Transactional

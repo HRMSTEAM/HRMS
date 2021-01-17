@@ -55,14 +55,14 @@
                     </a>
                     <ul class="pcoded-submenu">
                         <li class=" ">
-                            <a href="${pageContext.request.contextPath}/company/list" class="waves-effect waves-dark">
+                            <a href="${pageContext.request.contextPath}/company/details" class="waves-effect waves-dark">
                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                 <span class="pcoded-mtext">Company Master</span>
                                 <span class="pcoded-mcaret"></span>
                             </a>
                         </li>
                         <li class=" ">
-                            <a href="${pageContext.request.contextPath}/branch/list" class="waves-effect waves-dark">
+                            <a href="${pageContext.request.contextPath}/branch/details" class="waves-effect waves-dark">
                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                 <span class="pcoded-mtext">Branch Master</span>
                                 <span class="pcoded-mcaret"></span>
@@ -72,6 +72,13 @@
                             <a href="${pageContext.request.contextPath}/department/details" class="waves-effect waves-dark">
                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                 <span class="pcoded-mtext">Department Master</span>
+                                <span class="pcoded-mcaret"></span>
+                            </a>
+                        </li>
+                        <li class=" ">
+                            <a href="${pageContext.request.contextPath}/user/details" class="waves-effect waves-dark">
+                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                <span class="pcoded-mtext">User Master</span>
                                 <span class="pcoded-mcaret"></span>
                             </a>
                         </li>

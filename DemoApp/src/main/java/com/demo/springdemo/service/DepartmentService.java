@@ -8,7 +8,7 @@ public interface DepartmentService {
 
 	public void saveDepartment(Department department);
 	
-	public List<Department> getDepartmentes();
+	public List<Department> getDepartments();
 	
 	public Department getDepartment(String departmentId);
 	

@@ -29,7 +29,7 @@ public class DepartmentDAOImpl implements DepartmentDAO {
 		currentSession.saveOrUpdate(department);
 	}
 	
-	public List<Department> getDepartmentes() {
+	public List<Department> getDepartments() {
 
 		Session currentSession = sessionFactory.getCurrentSession();
 		
@@ -59,7 +59,7 @@ public class DepartmentDAOImpl implements DepartmentDAO {
 		
 	}
 	
-public String getMaxId() {
+	public String getMaxId() {
 		
  		Session currentSession = sessionFactory.getCurrentSession();
  		String str = null;

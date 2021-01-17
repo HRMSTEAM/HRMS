@@ -1,56 +1,116 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-    
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Sign Up Form</title>  
+<title>User Master</title>
 </head>
 <body>
-	<jsp:include page="../include/header.jsp"></jsp:include>
-	<div class="container">
-		<p><a href="${pageContext.request.contextPath}/user/ShowSignUpForm">Add New User</a></p>
-			
-		<%-- <c:url var="updateLink" value="ShowSignUpForm">
-			<c:param name="userId" value=""></c:param>
-		</c:url>
-		
-		<a href="${updateLink}">Update</a>| --%>
-		
-		<h1>User List</h1>    
-   		<table class="table table-hover">
-   			<thead>
-			<tr>
-				<th>User Id</th>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Action</th>
-			</tr>
-			</thead>
-			<tbody>
-			<!-- loop over and print our customers -->
-			<c:forEach var="tempUser" items="${users}">
-				<c:url var="updateLink" value="showFormForUpdate">
-					<c:param name="userId" value="${tempUser.userId }"></c:param>
-				</c:url>
-				<c:url var="deleteLink" value="deleteUser">
-					<c:param name="userId" value="${tempUser.userId }"></c:param>
-				</c:url>
-				<tr>
-					<td> ${tempUser.userId} </td>
-					<td> ${tempUser.firstName} </td>
-					<td> ${tempUser.lastName} </td>
-					<td>
-						<a href="${updateLink}">Update</a>|
-						<a href="${deleteLink}" onclick="if(!(confirm('Are your sure want to delete the customer?'))) return false">Delete</a>
-					</td>
-				</tr>
-			</c:forEach>
-			</tbody>
-		</table>		
+	<jsp:include page="../include/spiner.jsp"></jsp:include>
+	<!-- Pre-loader end -->
+	<div id="pcoded" class="pcoded">
+		<div class="pcoded-overlay-box"></div>
+		<div class="pcoded-container navbar-wrapper">
+			<jsp:include page="../include/header.jsp"></jsp:include>
+			<div class="pcoded-main-container">
+				<div class="pcoded-wrapper">
+					<jsp:include page="../include/menu.jsp"></jsp:include>
+					<div class="pcoded-content">
+						<!-- Page-header start -->
+						<!-- <div class="page-header">
+							<div class="page-block">
+								<div class="row align-items-center">
+									<div class="col-md-8">
+										<div class="page-header-title">
+											<h5 class="m-b-10">Dashboard</h5>
+											<p class="m-b-0">Welcome to Material Able</p>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<ul class="breadcrumb">
+											<li class="breadcrumb-item"><a href="index.html"> <i
+													class="fa fa-home"></i>
+											</a></li>
+											<li class="breadcrumb-item"><a href="#!">Dashboard</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> -->
+						<!-- Page-header end -->
+						<div class="pcoded-inner-content">
+							<!-- Main-body start -->
+							<div class="main-body">
+								<div class="page-wrapper">
+									<!-- Page-body start -->
+									<div class="page-body">
+										<!-- Basic table card start -->
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h5>User Details</h5>
+                                                <%-- <span>use class <code>table</code> inside table element</span> --%>
+                                                
+                                                <div align="right"><a href="${pageContext.request.contextPath}/user/ShowUserMasterForm">Add New User</a></div>
+                                                <div class="card-header-right">
+                                                    <ul class="list-unstyled card-option">
+                                                        <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                                        <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                        <li><i class="fa fa-minus minimize-card"></i></li>
+                                                        <li><i class="fa fa-refresh reload-card"></i></li>
+                                                        <li><i class="fa fa-trash close-card"></i></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card-block table-border-style">
+                                                <div class="table-responsive">
+                                                <%-- <p><a href="${pageContext.request.contextPath}/user/ShowUserMasterForm">Add New User</a></p> --%>
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>#</th>
+                                                                <th>User Id</th>
+                                                                <th>First Name</th>
+                                                                <th>Last Name</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <c:forEach var="tempUser" items="${user}">
+																<c:url var="updateLink" value="showFormForUpdate">
+																	<c:param name="userId" value="${tempUser.userId }"></c:param>
+																</c:url>
+																<c:url var="deleteLink" value="deleteUser">
+																	<c:param name="userId" value="${tempUser.userId }"></c:param>
+																</c:url>
+																<tr>
+																	<th scope="row">
+																	<td> ${tempUser.userId} </td>
+																	<td> ${tempUser.firstName} </td>
+																	<td> ${tempUser.lastName} </td>
+																	<td>
+																		<a href="${updateLink}"><i class="far fa-edit"> </i></a> | 
+																		<a href="${deleteLink}" onclick="if(!(confirm('Are your sure want to delete the user?'))) return false"><i class="far fa-trash-alt"> </i></a>
+																	</td> 
+																</tr>
+															</c:forEach>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Basic table card end -->										
+									</div>
+								</div>
+								<!-- Page-body end -->
+							</div>
+							<div id="styleSelector"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
+

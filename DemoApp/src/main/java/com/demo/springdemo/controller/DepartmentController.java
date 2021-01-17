@@ -33,41 +33,71 @@ public class DepartmentController {
 	private CompanyService companyService;
 
 	@PostMapping("/saveDepartment")
-	public String saveDepartment(@ModelAttribute("department") Department department, Model model) {
+	public String saveDepartment(@ModelAttribute("department") Department department, @RequestParam("action") String action, Model model) {
 	
-		departmentService.saveDepartment(department);
+		if(action.equals("Save")) {
+			departmentService.saveDepartment(department);
 
-		model.addAttribute("department", department);	
+			model.addAttribute("department", department);	
+			
+			List<Company> theCompany = companyService.getCompany();
+			model.addAttribute("companyList",theCompany);
+			
+			List<Branch> theBranch = branchService.getBranches();
+			model.addAttribute("branchList",theBranch);
 		
-		List<Company> theCompany = companyService.getCompany();
-		model.addAttribute("companyList",theCompany);
-		
-		List<Branch> theBranch = branchService.getBranches();
-		model.addAttribute("branchList",theBranch);
-		
-		return "department-master";
-	}
-	
-	@GetMapping("/details")
-	public String listDepartment(Model model) {
-
-		List<Department> theDepartment = departmentService.getDepartmentes();
-
-		model.addAttribute("department", theDepartment);
-
-		return "department-details";
-
+			model.addAttribute("successMsg", 	"Department Registered Successfully");
+		    return "department-master";
+		} 
+		else if(action.equals("Clear")) {
+			return "redirect:ShowDepartmentMasterForm";
+		} 
+		else if(action.equals("Close")) {
+			return "redirect:details";
+		}
+		else {
+			return "redirect:ShowDepartmentMasterForm";
+		}
 	}
 
 	@GetMapping("/showFormForUpdate")
 	public String getDepartment(@RequestParam("departmentId") String departmentId, Model model) {
 
 		Department department = departmentService.getDepartment(departmentId);
-
+		
 		model.addAttribute("department", department);
+		
+		List<Company> theCompany = companyService.getCompany();
+		model.addAttribute("companyList",theCompany);
+		
+		List<Branch> theBranch = branchService.getBranches();
+		model.addAttribute("branchList",theBranch);
 
 		return "department-master";
+	}
+	
+	@RequestMapping("/ShowDepartmentMasterForm")
+	public String showDepartmentMasterForm(Model model, Department department) {
+		
+		model.addAttribute("department", department);
+		
+		List<Company> theCompany = companyService.getCompany();
+		model.addAttribute("companyList",theCompany);
+		
+		List<Branch> theBranch = branchService.getBranches();
+		model.addAttribute("branchList",theBranch);
+				
+		return "department-master";
+	}
+	
+	@GetMapping("/details")
+	public String listDepartment(Model model) {
 
+		List<Department> theDepartment = departmentService.getDepartments();
+
+		model.addAttribute("department", theDepartment);
+
+		return "department-details";
 	}
 
 	@GetMapping("/deleteDepartment")
@@ -76,7 +106,6 @@ public class DepartmentController {
 		departmentService.deleteDepartment(departmentId);
 
 		return "redirect:/department/details";
-
 	}
 
 

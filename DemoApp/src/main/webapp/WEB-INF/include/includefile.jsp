@@ -46,5 +46,9 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/assets/js/pcoded.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/assets/js/vertical/vertical-layout.min.js "></script>
 
-    <script type="text/javascript" type="text/javascript" src="${pageContext.request.contextPath}/resources/assets/js/script.js "></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/assets/js/script.js "></script>
+    
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/assets/js/common-pages.js"></script>
+    
+    
     

@@ -49,9 +49,6 @@
 											<div class="card">
 												<div class="card-header">
 													<h5>Company Master</h5>
-													
-													
-													<%-- <div class="card-header-right"><a href="${pageContext.request.contextPath}/company/list">Company Details</a></div> --%>
 													<span class="form-txt-success">${successMsg}</span>
 												</div>
 												<div class="card-block">
@@ -59,10 +56,8 @@
 
 														<div class="form-group form-default form-static-label col-sm-6">
 															<form:input path="companyId" class="form-control" readonly="true" />
-
 															<span class="form-bar"></span> <label class="float-label">Company ID</label>
 														</div>
-														
 
 														<div class="form-group form-default form-static-label col-sm-6">
 															<form:input path="companyName" class="form-control" />
@@ -102,8 +97,7 @@
 														<div class="form-group form-default form-static-label col-sm-12" align="center">
 															<input type="submit" name="action" value="Save" class="btn btn-primary waves-effect waves-light">
 															<input type="submit" name="action" value="Clear" class="btn btn-primary waves-effect waves-light">
-														<input type="submit" name="action" value="Close" class="btn btn-primary waves-effect waves-light">
-													
+															<input type="submit" name="action" value="Close" class="btn btn-primary waves-effect waves-light">
 														</div>
 													</form:form>
 												
