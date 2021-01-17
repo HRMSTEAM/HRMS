@@ -8,6 +8,12 @@ import com.demo.springdemo.entity.User;
 @Controller
 public class DemoController {
 
+	@RequestMapping("/")
+	public String showLoginPage(Model model, User user) {
+		
+		return "redirect:ShowLoginForm";
+	}	
+	
 	@RequestMapping("homePage")
 	public String showHomePage(Model model, User user) {
 		
@@ -22,11 +28,7 @@ public class DemoController {
 		return "sign-up-form";
 	}
 	
-	@RequestMapping("/")
-	public String showLoginPage(Model model, User user) {
-		
-		return "redirect:/ShowLoginForm";
-	}	
+	
 	
 	@RequestMapping("ShowLoginForm")
 	public String showLoginForm(Model model, User user) {

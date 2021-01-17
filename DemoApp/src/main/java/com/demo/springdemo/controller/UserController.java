@@ -130,7 +130,6 @@ public class UserController {
 		
 		boolean validUser = userService.loginUser(userId, password);
 		
-		System.out.println("validUser: "+validUser);
 
 		if (validUser) {
 			User user = userService.getUser(userId);
@@ -152,4 +151,6 @@ public class UserController {
 	}
 		return msg;		
 	}
+	
+
 }

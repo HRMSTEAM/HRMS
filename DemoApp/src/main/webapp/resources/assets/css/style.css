@@ -7832,6 +7832,24 @@ body.menu-bottom #collapse-menu {
 	color: #11c15b;
 }
 
+.form-txt-error {
+	color: red;
+	font: 10px;
+}
+
+.form-txt-error:focus {
+	color: red;
+	font: 10px;
+}
+
+.form-txt-fail {
+	color: red;
+}
+
+.form-txt-fail:focus {
+	color: red;
+}
+
 .form-txt-success::-moz-placeholder {
 	color: #11c15b;
 	opacity: 1;

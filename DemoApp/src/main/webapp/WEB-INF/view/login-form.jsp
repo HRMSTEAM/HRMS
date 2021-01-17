@@ -8,6 +8,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Sign Up Form</title>
 <jsp:include page="../include/includefile.jsp" />    
+<script>
+function myFunction() {
+	  var x = document.getElementById("userPassword");
+	  if (x.type === "password") {
+	    x.type = "text";
+	  } else {
+	    x.type = "password";
+	  }
+	}
+</script>
 </head>
 <body themebg-pattern="theme1">
 	<!-- Pre-loader start -->
@@ -25,9 +35,9 @@
                         <div class="auth-box card">
                             <div class="card-block">
                                 <div class="m-b-20 row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-12" style="text-align: center;">
                                         <h3 class="text-center txt-primary">Sign In</h3>
-                                        <span class="form-txt-success">${failMsg}</span>                                        
+                                        <span  class="form-txt-error">${failMsg}</span>                                        
                                     </div>
                                 </div>                                
                                 <div class="form-group form-primary">
@@ -35,23 +45,32 @@
 									<span class="form-bar"></span><label class="float-label">User ID</label>
 								</div>
 								<div class="form-group form-primary">
-									<form:input path="userPassword" class="form-control" />
-									<span class="form-bar"></span><label class="float-label">Password</label>
+									<form:input path="userPassword" type="password" class="form-control" />
+									<span class="form-bar"></span><label class="float-label">Password</label>									
 								</div>
-								<div class="row m-t-25 text-left">
-                                    <div class="col-12">
-                                        <div class="checkbox-fade fade-in-primary d-">
+								
+								<div class="checkbox-fade fade-in-primary d-">
                                             <label>
-                                                <input type="checkbox" value="">
+                                                <input type="checkbox" onclick="myFunction()">
                                                 <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
-                                                <span class="text-inverse">Remember me</span>
+                                                <span class="text-inverse">Show Password</span>
                                             </label>
                                         </div>
-                                        <div class="forgot-phone text-right f-right">
-                                            <a href="auth-reset-password.html" class="text-right f-w-600"> Forgot Password?</a>
+								
+							 <div class="row m-t-25 text-left">
+                                        <div class="col-12">
+                                            <div class="checkbox-fade fade-in-primary d-">
+                                                <label>
+                                                    <input type="checkbox" value="">
+                                                    <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
+                                                    <span class="text-inverse">Remember me</span>
+                                                </label>
+                                            </div>
+                                            <div class="forgot-phone text-right f-right">
+                                                <a href="auth-reset-password.html" class="text-right f-w-600"> Forgot Password?</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                                 <div class="row m-t-30">
                                     <div class="col-md-12">
                                         <button type="submit" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Sign in</button>
@@ -59,9 +78,8 @@
                                 </div>
                                 <hr/>
                                 <div class="col-md-10">
-                                    <p class="text-inverse text-left m-b-0">Thank you.</p>
-                                    <p class="text-inverse text-left"><a href="index.html"><b>Back to website</b></a></p>
-                                    <p><a href="${pageContext.request.contextPath}/sign-up-form.jsp">Forgot Password</a>.</p>
+                              <p><a href="${pageContext.request.contextPath}/ShowUserMasterForm">Not registered yet? Sign in</a>.</p>
+
                                 </div>
                                 <div class="col-md-2">
                                     <img src="${pageContext.request.contextPath}/resources/assets/images/auth/Logo-small-bottom.png" alt="small-logo.png">
